@@ -27,6 +27,7 @@
                 @swiper="onSwiper"
                 @slideChange="onSlideChange"
                 :slides-per-view="3"
+                  class="select-none"
             >
               <swiper-slide>
                 <div>
