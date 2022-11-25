@@ -14,7 +14,7 @@
           </div>
 
 
-          <div class="basis-7/12 mt-24 ml-24 z-10 flex mr-40">
+          <div class="basis-7/12 mt-24 ml-18 z-10 flex mr-40">
 
 
             <swiper
