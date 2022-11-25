@@ -121,6 +121,7 @@ export default {
 }
 .works .swiper {
   height: 500px;
+   width: 1200px!important;
   padding-left: 80px;
 }
 </style>
