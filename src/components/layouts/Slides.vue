@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div class="relative mt-36 h-[652px] w-full">
+    <div class="relative mt-28 h-[600px] w-full">
       <div class="absolute top-0 left-0 w-[1293px] h-[576px] bg-[#ECF7FF] rounded-tr-[400px] -z-10">
       </div>
       <div class="mx-[50px]">
@@ -134,6 +134,7 @@ export default {
 }
 .swiper {
   height: 300px;
+  width: 1200px;
   padding-left: 100px;
 }
 
