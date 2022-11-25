@@ -25,7 +25,7 @@
                 @swiper="onSwiper"
                 @slideChange="onSlideChange"
                 :slides-per-view="3"
-                class="flex h-[192px] w-[1200px]"
+                class="flex h-[192px] w-[1200px] select-none"
 
 
             >
