@@ -2,8 +2,8 @@
 <div>
   <div>
 
-    <div class="relative mt-32">
-      <div class="absolute top-0 right-0 w-[1280px] h-[673px] -z-10 bg-[rgba(255,222,212,0.3)] rounded-tl-[400px] ">
+    <div class="relative mt-20">
+      <div class="absolute top-0 right-0 w-[1330px] h-[673px] -z-10 bg-[rgba(255,222,212,0.3)] rounded-tl-[400px] ">
       </div>
       <div class="flex flex-col z-10">
         <div class="basis-1/4 mt-[53px] mx-[50px]">
