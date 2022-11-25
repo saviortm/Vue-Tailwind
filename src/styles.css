@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+body {
+    background-color: #ffffff!important;
+}
+h1 {
+    font-family: "Playfair Display"!important;
+}
+li p {
+    font-family: "Hind Vadodara"!important;
+
+}
+#pposition::placeholder{
+    padding-left: 13px;
+}
+li {
+    cursor: pointer !important;
+}
