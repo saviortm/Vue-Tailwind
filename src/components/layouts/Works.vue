@@ -96,10 +96,10 @@ export default {
   content: '';
   position: absolute;
   height: 8px;
-  width: 18%;
+  width: 17%;
   background: #FDC221;
   bottom: -5%;
-  left: 18%;
+  left: 17.5%;
   z-index: -10;
 }
 

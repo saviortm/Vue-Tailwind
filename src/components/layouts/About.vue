@@ -44,7 +44,7 @@ export default {
   content: '';
   position: absolute;
   height: 8px;
-  width: 12%;
+  width: 11%;
   background: #FDC221;
   bottom: 0;
   left: 21%;
