@@ -23,6 +23,7 @@
           <div class="works flex mt-[89px] ml-[268px] ">
             <swiper
                 :options="swiperOptions"
+                :breakpoints="swiperOptions.breakpoints"
                 :modules="modules"
                 navigation
                 :scrollbar="{ draggable: false }"
@@ -31,7 +32,7 @@
                 :slides-per-view="3"
                   class="select-none"
             >
-              <swiper-slide class="m-2">
+              <swiper-slide class="m-2 flex justify-center">
                 <div>
                   <Workcardfirst/>
                 </div>
@@ -83,6 +84,26 @@ import Workcardthird from "@/components/Blocks/Slider-work/Workcardthird";
 
 export default {
   name: "Works",
+  data: function (){
+    return{
+      swiperOptions: {
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          750: {
+            slidesPerView: 2,
+            spaceBetween: 50
+          },
+          1080: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          }
+        },
+      },
+    }
+  },
   components: {
     Workcardthird,
     Workcardsecond,
@@ -91,7 +112,15 @@ export default {
     SwiperSlide,
   },
   setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log('slide change');
+    };
     return {
+      onSwiper,
+      onSlideChange,
       modules: [Navigation, A11y],
     };
   },
@@ -155,6 +184,15 @@ export default {
     position: absolute;
     top: 60%!important;
     left: 0%!important;
+    margin-left: 5px!important;
+  }
+}
+@media screen and (max-width: 768px)
+{
+  .works .swiper-button-next {
+    position: absolute;
+    top: 60%!important;
+    left: 10%!important;
     margin-left: 5px!important;
   }
 }

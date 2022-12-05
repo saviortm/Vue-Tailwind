@@ -23,7 +23,7 @@
             of type and scrambled it to make a type specimen book.</p>
         </div>
         <div class="max-lg:grid max-lg:justify-items-center">
-          <div class="flex w-52 h-16 bg-[#331B3B] rounded-xl justify-center mt-9 cursor-pointer max-xl:w-48 max-xl:h-14">
+          <div class="flex w-52 h-16 bg-[#331B3B] rounded-xl justify-center mt-9 cursor-pointer max-xl:w-48 max-xl:h-14 max-md:w-40 max-md:h-12">
             <p class="flex self-center font-bold text-base text-white max-xl:text-sm">EXPLORE MORE</p>
           </div>
         </div>

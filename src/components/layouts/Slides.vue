@@ -1,24 +1,20 @@
 <template>
   <div>
-
     <div class="relative mt-40 h-[650px] w-full">
       <div class="absolute top-0 left-0 w-[88%] h-[576px] bg-[#ECF7FF] rounded-tr-[400px] -z-10">
       </div>
       <div class="mx-[50px]">
         <div class="flex flex-col">
           <div class="basis-5/12 flex justify-center mt-24">
-            <div class="text-[#331B3B] tracking-[-0.01em] z-10 text-5xl max-xl:text-4xl max-lg:text-3xl">
+            <div class="text-[#331B3B] tracking-[-0.01em] z-10 text-5xl max-xl:text-4xl  max-lg:text-3xl">
               <p class="font-bold flex justify-center">What We Do</p>
               <p class="relative line__style__slides font-light flex justify-center">For Your <span class="z-10">Business</span></p>
             </div>
           </div>
-
-
-          <div class="basis-7/12 mt-24 ml-18 z-10 flex mr-40">
-
-
+          <div class="basis-7/12 mt-24 ml-18 z-10 flex mr-40 max-md:ml-2">
             <swiper
                 :options="swiperOptions"
+                :breakpoints="swiperOptions.breakpoints"
                 :modules="modules"
                 navigation
                 :scrollbar="{ draggable: false }"
@@ -26,55 +22,75 @@
                 @slideChange="onSlideChange"
                 :slides-per-view="3"
                 class="flex h-[192px] w-[1200px] select-none"
-
-
             >
-              <swiper-slide class="flex justify-center">
+              <swiper-slide class="flex justify-start">
                 <div>
-                 <Cardfirst/>
+                  <div class="w-[308px] h-48 bg-white rounded-lg max-xl:w-[90%]">
+                    <div class="flex flex-col p-4 space-y-2">
+                      <img class="w-[52px] h-[48px]" src="@/assets/worldsl.svg">
+                      <div>
+                        <p class="uppercase font-bold text-base text-[#331B3B]">website design</p>
+                      </div>
+                      <div>
+                        <p class="text-[rgba(51,27,59,0.66)] font-light text-sm">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </swiper-slide>
               <swiper-slide class="flex justify-center">
                 <div>
-                 <Cardsecond/>
+                  <div class="w-[308px] h-48 bg-white rounded-lg max-xl:w-[90%]">
+                    <div class="flex flex-col p-4 space-y-2">
+                      <img class="w-[52px] h-[48px]" src="@/assets/compsl.svg">
+                      <div>
+                        <p class="uppercase font-bold text-base text-[#331B3B]">mobile app development</p>
+                      </div>
+                      <div>
+                        <p class="text-[rgba(51,27,59,0.66)] font-light text-sm">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </swiper-slide>
               <swiper-slide class="flex justify-center">
                 <div>
-                 <Cardthird/>
+                  <div class="w-[308px] h-48 bg-white rounded-lg max-xl:w-[90%]">
+                    <div class="flex flex-col p-4 space-y-2">
+                      <img class="w-[52px] h-[48px]" src="@/assets/phonesl.svg">
+                      <div>
+                        <p class="uppercase font-bold text-base text-[#331B3B]">mobile app development</p>
+                      </div>
+                      <div>
+                        <p class="text-[rgba(51,27,59,0.66)] font-light text-sm">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </swiper-slide>
               <swiper-slide class="flex justify-center">
                 <div>
-              <Cardfourth/>
-                </div>
-              </swiper-slide>
-              <swiper-slide class="flex justify-center">
-                <div>
-                  <Cardfirst/>
-                </div>
-              </swiper-slide>
-              <swiper-slide class="flex justify-center">
-                <div>
-                <Cardsecond/>
+                  <div class="w-[308px] h-48 bg-white rounded-lg max-xl:w-[90%]">
+                    <div class="flex flex-col p-4 space-y-2">
+                      <img class="w-[52px] h-[48px]" src="@/assets/worldsl.svg">
+                      <div>
+                        <p class="uppercase font-bold text-base text-[#331B3B]">web development</p>
+                      </div>
+                      <div>
+                        <p class="text-[rgba(51,27,59,0.66)] font-light text-sm">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </swiper-slide>
             </swiper>
-
-
-
           </div>
         </div>
       </div>
-
       <div class="absolute bottom-0 right-0 -z-30 ">
-        <img class="max-xl:w-[450px] max-lg:w-[400px]" src="../../assets/slide.png" alt="">
+        <img class="max-xl:w-[450px] max-lg:w-[400px] max-md:w-[350px]" src="@/assets/slide.png" alt="">
       </div>
-
-
-
     </div>
-
   </div>
 </template>
 
@@ -90,6 +106,26 @@ import Cardthird from "@/components/Blocks/Slider/Cardthird";
 import Cardfourth from "@/components/Blocks/Slider/Cardfourth";
 export default {
   name: "Slides",
+  data: function (){
+    return{
+      swiperOptions: {
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          850: {
+            slidesPerView: 2,
+            spaceBetween: 50
+          },
+          1080: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          }
+        },
+      },
+    }
+  },
   components: {
     Cardfourth,
     Cardthird,
@@ -99,11 +135,21 @@ export default {
     SwiperSlide,
   },
   setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log('slide change');
+    };
     return {
+      onSwiper,
+      onSlideChange,
       modules: [Navigation, A11y],
     };
   },
+
 }
+
 </script>
 
 <style>
@@ -158,6 +204,15 @@ export default {
     position: absolute;
     top: 63%!important;
     left: 7%!important;
+    margin-left: 5px!important;
+  }
+}
+@media screen and (max-width: 768px)
+{
+  .swiper-button-next {
+    position: absolute;
+    top: 63%!important;
+    left: 9%!important;
     margin-left: 5px!important;
   }
 }
