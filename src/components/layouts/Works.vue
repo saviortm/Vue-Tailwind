@@ -3,22 +3,24 @@
   <div>
 
     <div class="relative mt-20">
-      <div class="absolute top-0 right-0 w-[1330px] h-[673px] -z-10 bg-[rgba(255,222,212,0.3)] rounded-tl-[400px] ">
+      <div class="absolute top-0 right-0 w-[88%] h-[673px] -z-10 bg-[rgba(255,222,212,0.3)] rounded-tl-[400px] ">
       </div>
       <div class="flex flex-col z-10">
         <div class="basis-1/4 mt-[53px] mx-[50px]">
-          <div class="flex flex-row">
-            <div class="basis-3/5 flex flex-col text-5xl tracking-[-0.01em] text-[331B3B]">
-              <p class="font-bold">Our Recent Work</p>
-              <p class="relative line__style__works font-light">By Our <span class="z-10">Experts</span></p>
+          <div class="flex flex-row justify-between">
+            <div class="flex flex-col text-5xl tracking-[-0.01em] text-[331B3B] max-xl:text-4xl max-lg:text-3xl">
+                <p class="font-bold">Our Recent Work</p>
+                <p class="font-light">By Our <span class="relative line__style__works z-10">Experts</span></p>
             </div>
-            <div class="basis-2/5">
-              <p class="font-normal text-lg w-[515px]">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <div>
+              <p class="font-normal text-lg w-[515px] text-[#331B3B] max-xl:text-base">Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took
+                a galley of type and scrambled it to make a type specimen book.</p>
             </div>
           </div>
         </div>
         <div class="basis-3/4">
-          <div class="works flex mt-[89px] ml-[268px] space-x-10">
+          <div class="works flex mt-[89px] ml-[268px] ">
             <swiper
                 :options="swiperOptions"
                 :modules="modules"
@@ -29,34 +31,34 @@
                 :slides-per-view="3"
                   class="select-none"
             >
-              <swiper-slide>
+              <swiper-slide class="m-2">
                 <div>
-                  <img src="../../assets/recent1.png" alt="">
+                  <Workcardfirst/>
                 </div>
               </swiper-slide>
-              <swiper-slide>
+              <swiper-slide class="m-2">
                 <div>
-                  <img src="../../assets/recent2.png" alt="">
+                  <Workcardsecond/>
                 </div>
               </swiper-slide>
-              <swiper-slide>
+              <swiper-slide class="m-2">
                 <div>
-                  <img src="../../assets/recent1.png" alt="">
+                  <Workcardthird/>
                 </div>
               </swiper-slide>
-              <swiper-slide>
+              <swiper-slide class="m-2">
                 <div>
-                  <img src="../../assets/recent2.png" alt="">
+                  <Workcardfirst/>
                 </div>
               </swiper-slide>
-              <swiper-slide>
+              <swiper-slide class="m-2">
                 <div>
-                  <img src="../../assets/recent1.png" alt="">
+                  <Workcardsecond/>
                 </div>
               </swiper-slide>
-              <swiper-slide>
+              <swiper-slide class="m-2">
                 <div>
-                  <img src="../../assets/recent2.png" alt="">
+                  <Workcardthird/>
                 </div>
               </swiper-slide>
             </swiper>
@@ -75,10 +77,16 @@ import { Navigation, A11y } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
+import Workcardfirst from "@/components/Blocks/Slider-work/Workcardfirst";
+import Workcardsecond from "@/components/Blocks/Slider-work/Workcardsecond";
+import Workcardthird from "@/components/Blocks/Slider-work/Workcardthird";
 
 export default {
   name: "Works",
   components: {
+    Workcardthird,
+    Workcardsecond,
+    Workcardfirst,
     Swiper,
     SwiperSlide,
   },
@@ -96,10 +104,9 @@ export default {
   content: '';
   position: absolute;
   height: 8px;
-  width: 17%;
+  width: 102%;
   background: #FDC221;
-  bottom: -5%;
-  left: 17.5%;
+  bottom: 10%;
   z-index: -10;
 }
 
@@ -124,5 +131,23 @@ export default {
   height: 500px;
    width: 1200px!important;
   padding-left: 80px;
+}
+
+@media screen and (max-width: 1280px)
+{
+  .works .swiper-button-next {
+    position: absolute;
+    top: 73%!important;
+    left: 6%!important;
+  }
+}
+
+@media screen and (max-width: 1024px)
+{
+  .works .swiper-button-next {
+    position: absolute;
+    top: 73%!important;
+    left: 7%!important;
+  }
 }
 </style>

@@ -7,7 +7,7 @@
     <div class="flex flex-col text-[#331B3B]">
 
       <div class="basis-1/4 flex justify-center">
-        <div class="flex flex-col text-5xl tracking-[-0.01em]">
+        <div class="flex flex-col text-5xl tracking-[-0.01em] max-xl:text-4xl max-lg:text-3xl">
           <p class="font-bold flex justify-center">Our Testimonials</p>
           <p class=" relative line__style__test font-light">What Our Clients Are <span class="z-10">Saying</span></p>
         </div>
@@ -25,7 +25,7 @@
               </div>
 
               <div class="basis-3/6 mt-[18px] mb-1">
-                <p class="font-normal text-base">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+                <p class="font-normal text-lg max-xl:text-base">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
               </div>
 
               <div class="relative basis-1/6">
@@ -48,7 +48,7 @@
               </div>
 
               <div class="basis-3/6 mt-[18px] mb-1">
-                <p class="font-normal text-base">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+                <p class="font-normal text-lg max-xl:text-base">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
               </div>
 
               <div class="relative basis-1/6">

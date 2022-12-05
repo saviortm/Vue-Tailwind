@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="bg-transparent">
-      <div class="flex justify-between  h-[100px] mx-[50px]">
+      <div class="flex justify-between h-[100px] mx-[50px]">
 
         <div class="self-center relative underline__style">
-          <ul class="flex space-x-8 font-normal text-base text-[#331B3B]">
+          <ul class="flex space-x-8 font-normal text-base text-[#331B3B] max-lg:hidden">
             <li><a href=""><router-link to="/">
               Home
             </router-link></a></li>
@@ -20,7 +20,7 @@
           </ul>
         </div>
 
-        <div class="self-center">
+        <div class="self-center max-lg:order-first">
           <h1 class="text-2xl tracking-widest text-[#331B3B] font-bold">
             Dream Agency
           </h1>
