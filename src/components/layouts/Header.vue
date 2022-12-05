@@ -10,7 +10,7 @@
             <div class="font-light"><span class="relative  z-10 line__style__header">Business</span></div>
           </div>
         </div>
-        <p class=" font-normal text-lg max-xl:text-base  tracking-wide mb-8 text-[#331B3B]  max-xl:w-[90%] max-lg:w-[85%]">Lorem Ipsum has been the industry's standard dummy
+        <p class=" font-normal text-lg max-xl:text-base  tracking-wide mb-8 text-[#331B3B]  max-xl:w-[90%] max-lg:w-[80%]">Lorem Ipsum has been the industry's standard dummy
           text ever since the 1500s, when an unknown printer took a galley of
           type and scrambled it to make a type specimen book.</p>
         <div class="cursor-pointer flex justify-center w-52 h-16 bg-[#331B3B] rounded-xl max-xl:w-48 max-xl:h-14">

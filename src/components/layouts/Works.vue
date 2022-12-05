@@ -7,12 +7,12 @@
       </div>
       <div class="flex flex-col z-10">
         <div class="basis-1/4 mt-[53px] mx-[50px]">
-          <div class="flex flex-row justify-between">
-            <div class="flex flex-col text-5xl tracking-[-0.01em] text-[331B3B] max-xl:text-4xl max-lg:text-3xl">
+          <div class="flex flex-row justify-between max-lg:flex-col">
+            <div class="flex flex-col text-5xl tracking-[-0.01em] text-[331B3B] max-xl:text-4xl max-lg:text-3xl max-lg:grid max-lg:justify-items-center">
                 <p class="font-bold">Our Recent Work</p>
                 <p class="font-light">By Our <span class="relative line__style__works z-10">Experts</span></p>
             </div>
-            <div>
+            <div class="max-lg:grid max-lg:justify-items-center max-lg:mt-5">
               <p class="font-normal text-lg w-[515px] text-[#331B3B] max-xl:text-base">Lorem Ipsum has been the industry's
                 standard dummy text ever since the 1500s, when an unknown printer took
                 a galley of type and scrambled it to make a type specimen book.</p>
@@ -146,8 +146,16 @@ export default {
 {
   .works .swiper-button-next {
     position: absolute;
-    top: 73%!important;
+    top: 60%!important;
     left: 7%!important;
+    margin-left: 5px!important;
+  }
+
+  .works .swiper-button-prev {
+    position: absolute;
+    top: 60%!important;
+    left: 0%!important;
+    margin-left: 5px!important;
   }
 }
 </style>

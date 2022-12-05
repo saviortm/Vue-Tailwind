@@ -158,6 +158,7 @@ export default {
     position: absolute;
     top: 63%!important;
     left: 7%!important;
+    margin-left: 5px!important;
   }
 }
 </style>
