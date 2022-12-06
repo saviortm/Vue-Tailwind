@@ -3,15 +3,15 @@
     <div class="relative mt-40 h-[650px] w-full">
       <div class="absolute top-0 left-0 w-[88%] h-[576px] bg-[#ECF7FF] rounded-tr-[400px] -z-10">
       </div>
-      <div class="mx-[50px]">
+      <div class="">
         <div class="flex flex-col">
-          <div class="basis-5/12 flex justify-center mt-24">
+          <div class="basis-5/12 flex justify-center mt-24 mx-[50px]">
             <div class="text-[#331B3B] tracking-[-0.01em] z-10 text-5xl max-xl:text-4xl  max-lg:text-3xl">
               <p class="font-bold flex justify-center">What We Do</p>
               <p class="relative line__style__slides font-light flex justify-center">For Your <span class="z-10">Business</span></p>
             </div>
           </div>
-          <div class="basis-7/12 mt-24 ml-18 z-10 flex mr-40 max-md:ml-2">
+          <div class="basis-7/12 mt-24 ml-18 z-10 flex mr-40  mx-[50px] max-sm:mx-0">
             <swiper
                 :options="swiperOptions"
                 :breakpoints="swiperOptions.breakpoints"
@@ -21,9 +21,9 @@
                 @swiper="onSwiper"
                 @slideChange="onSlideChange"
                 :slides-per-view="3"
-                class="flex h-[192px] w-[1200px] select-none"
+                class="select-none"
             >
-              <swiper-slide class="flex justify-center">
+              <swiper-slide class="flex self-start">
                 <div>
                   <div class="w-[308px] h-48 bg-white rounded-lg">
                     <div class="flex flex-col p-4 space-y-2">
@@ -38,7 +38,7 @@
                   </div>
                 </div>
               </swiper-slide>
-              <swiper-slide class="flex justify-center">
+              <swiper-slide class="flex self-start">
                 <div>
                   <div class="w-[308px] h-48 bg-white rounded-lg">
                     <div class="flex flex-col p-4 space-y-2">
@@ -53,9 +53,9 @@
                   </div>
                 </div>
               </swiper-slide>
-              <swiper-slide class="flex justify-center">
+              <swiper-slide class="flex self-start">
                 <div>
-                  <div class="w-[250px] h-48 bg-white rounded-lg">
+                  <div class="w-[308px] h-48 bg-white rounded-lg">
                     <div class="flex flex-col p-4 space-y-2">
                       <img class="w-[52px] h-[48px]" src="@/assets/phonesl.svg">
                       <div>
@@ -68,7 +68,7 @@
                   </div>
                 </div>
               </swiper-slide>
-              <swiper-slide class="flex justify-center">
+              <swiper-slide class="flex self-start">
                 <div>
                   <div class="w-[308px] h-48 bg-white rounded-lg">
                     <div class="flex flex-col p-4 space-y-2">
@@ -112,13 +112,13 @@ export default {
         breakpoints: {
           320: {
             slidesPerView: 1,
-            spaceBetween: 10
+            spaceBetween: 20
           },
-          960: {
+          970: {
             slidesPerView: 2,
             spaceBetween: 50
           },
-          1290: {
+          1360: {
             slidesPerView: 3,
             spaceBetween: 30
           }
@@ -221,7 +221,7 @@ export default {
   .swiper-button-next {
     position: absolute;
     top: 63%!important;
-    left: 15%!important;
+    left: 10%!important;
     margin-left: 5px!important;
   }
 }

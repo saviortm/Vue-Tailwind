@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="bg-white rounded-lg">
-      <div class="flex flex-col space-y-4 py-4 px-2 pb-8 max-xl:pb-[65px] max-lg:pb-8">
+      <div class="flex flex-col space-y-4 py-4 px-2 pb-8">
         <div class="flex flex-row">
           <img class="w-3/4" src="../../../assets/worksllg.svg">
           <img class="w-1/4" src="../../../assets/workslsm.svg">

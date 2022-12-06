@@ -20,46 +20,89 @@
           </div>
         </div>
         <div class="basis-3/4">
-          <div class="works flex mt-[89px] ml-[268px] ">
+          <div class="works flex mt-[89px] ml-[268px] max-lg:mt-4 max-lg:ml-[120px] max-sm:ml-[0px]">
             <swiper
                 :options="swiperOptions"
                 :breakpoints="swiperOptions.breakpoints"
                 :modules="modules"
+                space-between="10"
                 navigation
                 :scrollbar="{ draggable: false }"
                 @swiper="onSwiper"
                 @slideChange="onSlideChange"
-                :slides-per-view="3"
+                :slides-per-view="2"
                   class="select-none"
             >
-              <swiper-slide class="m-2 flex justify-center">
+              <swiper-slide class="flex justify-center">
                 <div>
-                  <Workcardfirst/>
+                  <div class="w-[419px] h-[365px] bg-white rounded-lg">
+                    <div class="flex flex-col space-y-4">
+                      <div class="flex flex-row justify-center p-2">
+                        <img class="w-[286px] h-[228px] self-center" src="@/assets/worksllg.svg">
+                        <img class="w-[89px] h-[238px] self-center" src="@/assets/workslsm.svg">
+                      </div>
+                      <div class="flex flex-row justify-between px-4 text-[#331B3B]">
+                        <p class="font-bold text-[#331B3B] text-2xl">UI Soup</p>
+                        <div class="cursor-pointer">
+                          <p class="border-2 border-solid rounded-2xl border-[#331B3B] font-medium text-sm px-1">View Work</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </swiper-slide>
-              <swiper-slide class="m-2">
+              <swiper-slide class="flex justify-center">
                 <div>
-                  <Workcardsecond/>
+                  <div class="w-[419px] h-[365px] bg-white rounded-lg">
+                    <div class="flex flex-col space-y-4">
+                      <div class="flex flex-row justify-center p-2">
+                        <img class="w-[286px] h-[228px] self-center" src="@/assets/worksllg2.svg">
+                        <img class="w-[89px] h-[238px] self-center" src="@/assets/workslsm2.svg">
+                      </div>
+                      <div class="flex flex-row justify-between px-4 text-[#331B3B]">
+                        <p class="font-bold text-[#331B3B] text-2xl">Goldcrown Labs</p>
+                        <div class="cursor-pointer">
+                          <p class=" border-2 border-solid rounded-2xl border-[#331B3B] font font-medium text-sm px-1">View Work</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </swiper-slide>
-              <swiper-slide class="m-2">
+              <swiper-slide class="flex justify-center">
                 <div>
-                  <Workcardthird/>
+                  <div class="w-[419px] h-[365px] bg-white rounded-lg">
+                    <div class="flex flex-col space-y-4">
+                      <div class="flex flex-row justify-center p-2">
+                        <img class="w-[286px] h-[228px] self-center" src="@/assets/worksllg2.svg">
+                        <img class="w-[89px] h-[238px] self-center" src="@/assets/workslsm2.svg">
+                      </div>
+                      <div class="flex flex-row justify-between px-4 text-[#331B3B]">
+                        <p class="font-bold text-[#331B3B] text-2xl">Goldcrown Labs</p>
+                        <div class="cursor-pointer">
+                          <p class=" border-2 border-solid rounded-2xl border-[#331B3B] font font-medium text-sm px-1">View Work</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </swiper-slide>
-              <swiper-slide class="m-2">
+              <swiper-slide class="flex justify-center">
                 <div>
-                  <Workcardfirst/>
-                </div>
-              </swiper-slide>
-              <swiper-slide class="m-2">
-                <div>
-                  <Workcardsecond/>
-                </div>
-              </swiper-slide>
-              <swiper-slide class="m-2">
-                <div>
-                  <Workcardthird/>
+                  <div class="w-[419px] h-[365px] bg-white rounded-lg">
+                    <div class="flex flex-col space-y-4">
+                      <div class="flex flex-row justify-center p-2">
+                        <img class="w-[286px] h-[228px] self-center" src="@/assets/worksllg2.svg">
+                        <img class="w-[89px] h-[238px] self-center" src="@/assets/workslsm2.svg">
+                      </div>
+                      <div class="flex flex-row justify-between px-4 text-[#331B3B]">
+                        <p class="font-bold text-[#331B3B] text-2xl">Goldcrown Labs</p>
+                        <div class="cursor-pointer">
+                          <p class=" border-2 border-solid rounded-2xl border-[#331B3B] font font-medium text-sm px-1">View Work</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </swiper-slide>
             </swiper>
@@ -90,15 +133,15 @@ export default {
         breakpoints: {
           320: {
             slidesPerView: 1,
-            spaceBetween: 10
+            spaceBetween: 70
           },
           750: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 50
           },
-          1080: {
-            slidesPerView: 3,
-            spaceBetween: 30
+          1200: {
+            slidesPerView: 2,
+            spaceBetween: 90
           }
         },
       },
@@ -176,7 +219,7 @@ export default {
   .works .swiper-button-next {
     position: absolute;
     top: 60%!important;
-    left: 7%!important;
+    left: 5%!important;
     margin-left: 5px!important;
   }
 
@@ -192,7 +235,7 @@ export default {
   .works .swiper-button-next {
     position: absolute;
     top: 60%!important;
-    left: 10%!important;
+    left: 7%!important;
     margin-left: 5px!important;
   }
 }
@@ -201,7 +244,7 @@ export default {
   .works .swiper-button-next {
     position: absolute;
     top: 60%!important;
-    left: 15%!important;
+    left: 8%!important;
     margin-left: 5px!important;
   }
 }
