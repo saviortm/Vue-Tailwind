@@ -1,20 +1,20 @@
 <template>
 <div>
-  <div class="mx-[50px] max-sm:bg-pink-400 max-md:bg-blue-400">
+  <div class="mx-[50px]">
     <div class="flex flex-row max-lg:flex-col">
-      <div class="basis-5/12 text-[#331B3B] mt-32 max-xl:mt-28 max-lg:order-last max-lg:grid max-lg:justify-items-center">
+      <div class="basis-5/12 text-[#331B3B] mt-32 max-xl:mt-28 max-lg:order-last max-lg:grid max-lg:justify-items-center max-sm:mt-0">
         <div class="flex mb-7 max-lg:justify-center ">
-          <div class="flex flex-col text-8xl max-xl:text-6xl max-lg:text-4xl tracking-[-0.01em]max-md:bg-blue-400 max-lg:grid max-lg:justify-items-center">
+          <div class="flex flex-col text-8xl max-xl:text-6xl max-lg:text-4xl tracking-[-0.01em] max-lg:grid max-lg:justify-items-center max-sm:text-3xl">
             <div class="font-bold">We Help You</div>
             <div class="font-light">to grow your</div>
             <div class="font-light"><span class="relative  z-10 line__style__header">Business</span></div>
           </div>
         </div>
-        <p class=" font-normal text-lg max-xl:text-base  tracking-wide mb-8 text-[#331B3B]  max-xl:w-[90%] max-lg:w-[80%]">Lorem Ipsum has been the industry's standard dummy
+        <p class=" font-normal text-lg max-xl:text-base  tracking-wide mb-8 text-[#331B3B]  max-xl:w-[90%] max-lg:w-[80%] max-sm:text-sm">Lorem Ipsum has been the industry's standard dummy
           text ever since the 1500s, when an unknown printer took a galley of
           type and scrambled it to make a type specimen book.</p>
-        <div class="cursor-pointer flex justify-center w-52 h-16 bg-[#331B3B] rounded-xl max-xl:w-48 max-xl:h-14 max-md:w-40 max-md:h-12">
-          <div class="flex self-center justify-center text-white w-28 h-6"><p class="font-bold text-base max-xl:text-sm uppercase">get started</p>
+        <div class="cursor-pointer flex justify-center w-52 h-16 bg-[#331B3B] rounded-xl max-xl:w-48 max-xl:h-14 max-md:w-40 max-md:h-12 max-sm:w-32 max-sm:h-10">
+          <div class="flex self-center justify-center text-white w-28 h-6"><p class="font-bold text-base max-xl:text-sm uppercase max-sm:font-semibold">get started</p>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex mt-24 bg-black w-full h-[453px] rounded-tr-[158px] max-sm:bg-pink-900 ">
+    <div class="flex mt-24 bg-black w-full h-[453px] rounded-tr-[158px]">
       <div class="flex flex-row justify-between mx-[50px] w-full mr-36 max-xl:mr-24 max-lg:mr-16 max-lg:grid max-lg:grid-cols-2 max-md:flex max-md:flex-col">
           <div class="flex flex-col text-white space-y-5 mt-20 max-md:space-y-0 max-md:mt-4 max-md:grid max-md:justify-items-center">
             <h1 class="text-4xl max-xl:text-3xl tracking-widest">Dream Agency</h1>

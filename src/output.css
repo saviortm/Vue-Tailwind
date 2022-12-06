@@ -650,6 +650,10 @@ video {
   margin-top: 2.5rem;
 }
 
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -762,6 +766,14 @@ video {
   width: 25%;
 }
 
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[250px\] {
+  width: 250px;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -870,8 +882,24 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.space-x-12 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(3rem * var(--tw-space-x-reverse));
+  margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-24 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(6rem * var(--tw-space-x-reverse));
+  margin-left: calc(6rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .self-center {
   align-self: center;
+}
+
+.overflow-scroll {
+  overflow: scroll;
 }
 
 .rounded-xl {
@@ -1234,10 +1262,6 @@ video {
     height: 550px;
   }
 
-  .max-lg\:h-\[350px\] {
-    height: 350px;
-  }
-
   .max-lg\:w-full {
     width: 100%;
   }
@@ -1302,20 +1326,16 @@ video {
     margin-top: 1rem;
   }
 
-  .max-md\:ml-2 {
-    margin-left: 0.5rem;
-  }
-
   .max-md\:mt-1 {
     margin-top: 0.25rem;
   }
 
-  .max-md\:mb-4 {
-    margin-bottom: 1rem;
-  }
-
   .max-md\:mb-8 {
     margin-bottom: 2rem;
+  }
+
+  .max-md\:ml-2 {
+    margin-left: 0.5rem;
   }
 
   .max-md\:flex {
@@ -1330,32 +1350,12 @@ video {
     height: 3rem;
   }
 
-  .max-md\:h-\[85\%\] {
-    height: 85%;
-  }
-
-  .max-md\:h-\[100\%\] {
-    height: 100%;
-  }
-
   .max-md\:h-\[70\%\] {
     height: 70%;
   }
 
-  .max-md\:h-\[350px\] {
-    height: 350px;
-  }
-
-  .max-md\:h-\[250px\] {
-    height: 250px;
-  }
-
-  .max-md\:h-\[150px\] {
-    height: 150px;
-  }
-
-  .max-md\:h-\[80\%\] {
-    height: 80%;
+  .max-md\:h-\[100\%\] {
+    height: 100%;
   }
 
   .max-md\:h-\[200px\] {
@@ -1366,48 +1366,20 @@ video {
     width: 10rem;
   }
 
-  .max-md\:w-\[95\%\] {
-    width: 95%;
-  }
-
-  .max-md\:w-\[70\%\] {
-    width: 70%;
+  .max-md\:w-\[400px\] {
+    width: 400px;
   }
 
   .max-md\:w-\[350px\] {
     width: 350px;
   }
 
-  .max-md\:w-\[80\%\] {
-    width: 80%;
-  }
-
-  .max-md\:w-\[90\%\] {
-    width: 90%;
-  }
-
-  .max-md\:w-\[250px\] {
-    width: 250px;
-  }
-
-  .max-md\:w-\[300px\] {
-    width: 300px;
-  }
-
-  .max-md\:w-\[500px\] {
-    width: 500px;
-  }
-
-  .max-md\:w-\[400px\] {
-    width: 400px;
+  .max-md\:w-\[70\%\] {
+    width: 70%;
   }
 
   .max-md\:flex-col {
     flex-direction: column;
-  }
-
-  .max-md\:justify-start {
-    justify-content: flex-start;
   }
 
   .max-md\:justify-items-center {
@@ -1419,34 +1391,70 @@ video {
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
-
-  .max-md\:self-auto {
-    align-self: auto;
-  }
-
-  .max-md\:justify-self-auto {
-    justify-self: auto;
-  }
-
-  .max-md\:bg-blue-700 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(29 78 216 / var(--tw-bg-opacity));
-  }
-
-  .max-md\:bg-blue-400 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(96 165 250 / var(--tw-bg-opacity));
-  }
 }
 
 @media not all and (min-width: 640px) {
+  .max-sm\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .max-sm\:h-10 {
+    height: 2.5rem;
+  }
+
+  .max-sm\:w-32 {
+    width: 8rem;
+  }
+
+  .max-sm\:w-\[55px\] {
+    width: 55px;
+  }
+
+  .max-sm\:w-\[300px\] {
+    width: 300px;
+  }
+
+  .max-sm\:w-\[80\%\] {
+    width: 80%;
+  }
+
+  .max-sm\:w-\[90\%\] {
+    width: 90%;
+  }
+
+  .max-sm\:w-\[30px\] {
+    width: 30px;
+  }
+
+  .max-sm\:w-\[60\%\] {
+    width: 60%;
+  }
+
+  .max-sm\:w-\[65\%\] {
+    width: 65%;
+  }
+
   .max-sm\:bg-pink-900 {
     --tw-bg-opacity: 1;
     background-color: rgb(131 24 67 / var(--tw-bg-opacity));
   }
 
-  .max-sm\:bg-pink-400 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(244 114 182 / var(--tw-bg-opacity));
+  .max-sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .max-sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .max-sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .max-sm\:font-semibold {
+    font-weight: 600;
   }
 }

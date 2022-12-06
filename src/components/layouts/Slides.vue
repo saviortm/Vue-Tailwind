@@ -23,9 +23,9 @@
                 :slides-per-view="3"
                 class="flex h-[192px] w-[1200px] select-none"
             >
-              <swiper-slide class="flex justify-start">
+              <swiper-slide class="flex justify-center">
                 <div>
-                  <div class="w-[308px] h-48 bg-white rounded-lg max-xl:w-[90%]">
+                  <div class="w-[308px] h-48 bg-white rounded-lg">
                     <div class="flex flex-col p-4 space-y-2">
                       <img class="w-[52px] h-[48px]" src="@/assets/worldsl.svg">
                       <div>
@@ -40,7 +40,7 @@
               </swiper-slide>
               <swiper-slide class="flex justify-center">
                 <div>
-                  <div class="w-[308px] h-48 bg-white rounded-lg max-xl:w-[90%]">
+                  <div class="w-[308px] h-48 bg-white rounded-lg">
                     <div class="flex flex-col p-4 space-y-2">
                       <img class="w-[52px] h-[48px]" src="@/assets/compsl.svg">
                       <div>
@@ -55,7 +55,7 @@
               </swiper-slide>
               <swiper-slide class="flex justify-center">
                 <div>
-                  <div class="w-[308px] h-48 bg-white rounded-lg max-xl:w-[90%]">
+                  <div class="w-[250px] h-48 bg-white rounded-lg">
                     <div class="flex flex-col p-4 space-y-2">
                       <img class="w-[52px] h-[48px]" src="@/assets/phonesl.svg">
                       <div>
@@ -70,7 +70,7 @@
               </swiper-slide>
               <swiper-slide class="flex justify-center">
                 <div>
-                  <div class="w-[308px] h-48 bg-white rounded-lg max-xl:w-[90%]">
+                  <div class="w-[308px] h-48 bg-white rounded-lg">
                     <div class="flex flex-col p-4 space-y-2">
                       <img class="w-[52px] h-[48px]" src="@/assets/worldsl.svg">
                       <div>
@@ -88,7 +88,7 @@
         </div>
       </div>
       <div class="absolute bottom-0 right-0 -z-30 ">
-        <img class="max-xl:w-[450px] max-lg:w-[400px] max-md:w-[350px]" src="@/assets/slide.png" alt="">
+        <img class="max-xl:w-[450px] max-lg:w-[400px] max-md:w-[350px] max-sm:w-[300px]" src="@/assets/slide.png" alt="">
       </div>
     </div>
   </div>
@@ -114,11 +114,11 @@ export default {
             slidesPerView: 1,
             spaceBetween: 10
           },
-          850: {
+          960: {
             slidesPerView: 2,
             spaceBetween: 50
           },
-          1080: {
+          1290: {
             slidesPerView: 3,
             spaceBetween: 30
           }
@@ -175,12 +175,12 @@ export default {
 .swiper-button-prev{
   position: absolute;
   top: 63%!important;
-  left: 1%!important;
+  left: 2%!important;
 }
 .swiper-button-next {
   position: absolute;
   top: 63%!important;
-  left: 5%!important;
+  left: 6%!important;
 }
 .swiper {
   height: 300px;
@@ -194,7 +194,7 @@ export default {
   .swiper-button-next {
     position: absolute;
     top: 63%!important;
-    left: 6%!important;
+    left: 7%!important;
   }
 }
 
@@ -203,7 +203,7 @@ export default {
   .swiper-button-next {
     position: absolute;
     top: 63%!important;
-    left: 7%!important;
+    left: 8%!important;
     margin-left: 5px!important;
   }
 }
@@ -212,7 +212,16 @@ export default {
   .swiper-button-next {
     position: absolute;
     top: 63%!important;
-    left: 9%!important;
+    left: 10%!important;
+    margin-left: 5px!important;
+  }
+}
+@media screen and (max-width: 640px)
+{
+  .swiper-button-next {
+    position: absolute;
+    top: 63%!important;
+    left: 15%!important;
     margin-left: 5px!important;
   }
 }

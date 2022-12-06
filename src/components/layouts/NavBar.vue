@@ -21,15 +21,15 @@
         </div>
 
         <div class="self-center max-lg:order-first">
-          <h1 class="text-2xl tracking-widest text-[#331B3B] font-bold">
+          <h1 class="text-2xl tracking-widest text-[#331B3B] font-bold max-sm:text-xl">
             Dream Agency
           </h1>
         </div>
 
         <div class="flex self-center space-x-2 z-20">
-          <img class="cursor-pointer" src="../../assets/facebook.svg" alt="">
-          <img class="cursor-pointer " src="../../assets/linkedin.svg" alt="">
-          <img class="cursor-pointer " src="../../assets/instagram.svg" alt="">
+          <img class="cursor-pointer max-sm:w-[55px]" src="../../assets/facebook.svg" alt="">
+          <img class="cursor-pointer max-sm:w-[55px]" src="../../assets/linkedin.svg" alt="">
+          <img class="cursor-pointer max-sm:w-[55px]" src="../../assets/instagram.svg" alt="">
         </div>
 
       </div>

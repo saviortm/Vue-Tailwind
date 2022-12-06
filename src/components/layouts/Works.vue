@@ -13,7 +13,7 @@
                 <p class="font-light">By Our <span class="relative line__style__works z-10">Experts</span></p>
             </div>
             <div class="max-lg:grid max-lg:justify-items-center max-lg:mt-5">
-              <p class="font-normal text-lg w-[515px] text-[#331B3B] max-xl:text-base">Lorem Ipsum has been the industry's
+              <p class="font-normal text-lg w-[515px] text-[#331B3B] max-xl:text-base max-sm:text-sm max-sm:w-[90%]">Lorem Ipsum has been the industry's
                 standard dummy text ever since the 1500s, when an unknown printer took
                 a galley of type and scrambled it to make a type specimen book.</p>
             </div>
@@ -132,7 +132,7 @@ export default {
 .line__style__works::before {
   content: '';
   position: absolute;
-  height: 8px;
+  height: 15%;
   width: 102%;
   background: #FDC221;
   bottom: 10%;
@@ -193,6 +193,15 @@ export default {
     position: absolute;
     top: 60%!important;
     left: 10%!important;
+    margin-left: 5px!important;
+  }
+}
+@media screen and (max-width: 640px)
+{
+  .works .swiper-button-next {
+    position: absolute;
+    top: 60%!important;
+    left: 15%!important;
     margin-left: 5px!important;
   }
 }
