@@ -11,7 +11,7 @@
               <p class="relative line__style__slides font-light flex justify-center">For Your <span class="z-10">Business</span></p>
             </div>
           </div>
-          <div class="basis-7/12 mt-24 ml-18 z-10 flex mr-40  mx-[50px] max-sm:mx-0">
+          <div class="basis-7/12 mt-24 ml-18 z-10 flex mr-40  mx-[50px] max-sm:mx-0 slides">
             <swiper
                 :options="swiperOptions"
                 :breakpoints="swiperOptions.breakpoints"
@@ -25,7 +25,7 @@
             >
               <swiper-slide class="flex self-start">
                 <div>
-                  <div class="w-[308px] h-48 bg-white rounded-lg">
+                  <div class="w-[308px] h-48 bg-white rounded-lg my__slide__card">
                     <div class="flex flex-col p-4 space-y-2">
                       <img class="w-[52px] h-[48px]" src="@/assets/worldsl.svg">
                       <div>
@@ -40,7 +40,7 @@
               </swiper-slide>
               <swiper-slide class="flex self-start">
                 <div>
-                  <div class="w-[308px] h-48 bg-white rounded-lg">
+                  <div class="w-[308px] h-48 bg-white rounded-lg my__slide__card">
                     <div class="flex flex-col p-4 space-y-2">
                       <img class="w-[52px] h-[48px]" src="@/assets/compsl.svg">
                       <div>
@@ -55,7 +55,7 @@
               </swiper-slide>
               <swiper-slide class="flex self-start">
                 <div>
-                  <div class="w-[308px] h-48 bg-white rounded-lg">
+                  <div class="w-[308px] h-48 bg-white rounded-lg my__slide__card">
                     <div class="flex flex-col p-4 space-y-2">
                       <img class="w-[52px] h-[48px]" src="@/assets/phonesl.svg">
                       <div>
@@ -70,7 +70,7 @@
               </swiper-slide>
               <swiper-slide class="flex self-start">
                 <div>
-                  <div class="w-[308px] h-48 bg-white rounded-lg">
+                  <div class="w-[308px] h-48 bg-white rounded-lg my__slide__card">
                     <div class="flex flex-col p-4 space-y-2">
                       <img class="w-[52px] h-[48px]" src="@/assets/worldsl.svg">
                       <div>
@@ -222,5 +222,18 @@ export default {
     right: 1%;
     z-index: -10;
   }
+}
+@media screen and (max-width: 500px)
+{
+  .slides .swiper {
+    padding-left: 40px;
+  }
+  .swiper-button-next {
+    top: 72%!important;
+  }
+  .swiper-button-prev{
+    top: 72%!important;
+  }
+
 }
 </style>

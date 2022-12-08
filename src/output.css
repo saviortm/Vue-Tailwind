@@ -1455,6 +1455,10 @@ video {
     width: 90%;
   }
 
+  .max-sm\:w-\[66\%\] {
+    width: 66%;
+  }
+
   .max-sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;

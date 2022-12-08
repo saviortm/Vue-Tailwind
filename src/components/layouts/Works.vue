@@ -34,7 +34,7 @@
               >
                 <swiper-slide class="flex justify-center">
                   <div>
-                    <div class="w-[419px] h-[365px] bg-white rounded-lg">
+                    <div class="w-[419px] h-[365px] bg-white rounded-lg my__work__card">
                       <div class="flex flex-col space-y-4">
                         <div class="flex flex-row justify-center p-2">
                           <img class="w-[286px] h-[228px] self-center" src="@/assets/worksllg.svg">
@@ -52,7 +52,7 @@
                 </swiper-slide>
                 <swiper-slide class="flex justify-center">
                   <div>
-                    <div class="w-[419px] h-[365px] bg-white rounded-lg">
+                    <div class="w-[419px] h-[365px] bg-white rounded-lg  my__work__card">
                       <div class="flex flex-col space-y-4">
                         <div class="flex flex-row justify-center p-2">
                           <img class="w-[286px] h-[228px] self-center" src="@/assets/worksllg2.svg">
@@ -70,7 +70,7 @@
                 </swiper-slide>
                 <swiper-slide class="flex justify-center">
                   <div>
-                    <div class="w-[419px] h-[365px] bg-white rounded-lg">
+                    <div class="w-[419px] h-[365px] bg-white rounded-lg my__work__card">
                       <div class="flex flex-col space-y-4">
                         <div class="flex flex-row justify-center p-2">
                           <img class="w-[286px] h-[228px] self-center" src="@/assets/worksllg2.svg">
@@ -88,7 +88,7 @@
                 </swiper-slide>
                 <swiper-slide class="flex justify-center">
                   <div>
-                    <div class="w-[419px] h-[365px] bg-white rounded-lg">
+                    <div class="w-[419px] h-[365px] bg-white rounded-lg my__work__card">
                       <div class="flex flex-col space-y-4">
                         <div class="flex flex-row justify-center p-2">
                           <img class="w-[286px] h-[228px] self-center" src="@/assets/worksllg2.svg">
@@ -196,7 +196,7 @@ export default {
 .works .swiper {
   height: 500px;
   width: 1200px!important;
-  padding-left: 80px;
+  padding-left: 60px;
 }
 @media screen and (max-width: 1280px)
 {
@@ -233,10 +233,22 @@ export default {
 @media screen and (max-width: 640px)
 {
   .works .swiper-button-next {
-    position: absolute;
-    top: 60%!important;
     left: 8%!important;
-    margin-left: 5px!important;
   }
+}
+
+@media screen and (max-width: 500px)
+{
+  .works .swiper {
+    padding-left: 10px;
+  }
+  .works .swiper-button-next {
+    top: 70%!important;
+    left: 9%!important;
+  }
+  .works .swiper-button-prev{
+    top: 70%!important;
+  }
+
 }
 </style>
