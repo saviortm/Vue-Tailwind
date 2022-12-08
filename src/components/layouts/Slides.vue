@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="relative mt-40 h-[650px] w-full">
-      <div class="absolute top-0 left-0 w-[88%] h-[576px] bg-[#ECF7FF] rounded-tr-[400px] -z-10">
+      <div class="absolute top-0 left-0 w-[88%] h-[576px]  bg-[#ECF7FF] rounded-tr-[400px] -z-10 max-sm:h-[450px] max-sm:top-[5%]">
       </div>
       <div class="">
         <div class="flex flex-col">
-          <div class="basis-5/12 flex justify-center mt-24 mx-[50px]">
+          <div class="basis-5/12 flex justify-center mt-24 mx-[50px] max-sm:mt-4">
             <div class="text-[#331B3B] tracking-[-0.01em] z-10 text-5xl max-xl:text-4xl  max-lg:text-3xl">
               <p class="font-bold flex justify-center">What We Do</p>
               <p class="relative line__style__slides font-light flex justify-center">For Your <span class="z-10">Business</span></p>
@@ -88,7 +88,7 @@
         </div>
       </div>
       <div class="absolute bottom-0 right-0 -z-30 ">
-        <img class="max-xl:w-[450px] max-lg:w-[400px] max-md:w-[350px] max-sm:w-[300px]" src="@/assets/slide.png" alt="">
+        <img class="max-xl:w-[450px] max-lg:w-[400px] max-md:w-[350px] max-sm:w-[250px]" src="@/assets/slide.png" alt="">
       </div>
     </div>
   </div>
@@ -147,9 +147,7 @@ export default {
       modules: [Navigation, A11y],
     };
   },
-
 }
-
 </script>
 
 <style>
@@ -159,19 +157,16 @@ export default {
   height: 25%;
   width: 47%;
   background: #FDC221;
-  bottom: 0;
+  bottom: 2%;
   right: 1%;
   z-index: -10;
 }
-
 .swiper-button-prev:after {
   content: url('../../assets/leftbutton.svg')!important;
 }
-
 .swiper-button-next:after {
   content: url('../../assets/rightbutton.svg')!important;
 }
-
 .swiper-button-prev{
   position: absolute;
   top: 63%!important;
@@ -187,8 +182,6 @@ export default {
   width: 1200px;
   padding-left: 100px;
 }
-
-
 @media screen and (max-width: 1280px)
 {
   .swiper-button-next {
@@ -197,7 +190,6 @@ export default {
     left: 7%!important;
   }
 }
-
 @media screen and (max-width: 1024px)
 {
   .swiper-button-next {
@@ -223,6 +215,12 @@ export default {
     top: 63%!important;
     left: 10%!important;
     margin-left: 5px!important;
+  }
+  .line__style__slides::before {
+    height: 20%;
+    bottom: 10%;
+    right: 1%;
+    z-index: -10;
   }
 }
 </style>

@@ -2,7 +2,6 @@
   <div>
     <div class="bg-transparent">
       <div class="flex justify-between h-[100px] mx-[50px]">
-
         <div class="self-center relative underline__style">
           <ul class="flex space-x-8 font-normal text-base text-[#331B3B] max-lg:hidden">
             <li><a href=""><router-link to="/">
@@ -19,19 +18,16 @@
             </router-link></a></li>
           </ul>
         </div>
-
         <div class="self-center max-lg:order-first">
           <h1 class="text-2xl tracking-widest text-[#331B3B] font-bold max-sm:text-xl">
             Dream Agency
           </h1>
         </div>
-
         <div class="flex self-center space-x-2 z-20">
           <img class="cursor-pointer max-sm:w-[55px]" src="../../assets/facebook.svg" alt="">
           <img class="cursor-pointer max-sm:w-[55px]" src="../../assets/linkedin.svg" alt="">
           <img class="cursor-pointer max-sm:w-[55px]" src="../../assets/instagram.svg" alt="">
         </div>
-
       </div>
     </div>
   </div>
