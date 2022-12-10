@@ -27,10 +27,8 @@ const routes = [
         component: ContactUs
     }
 ]
-
 const router = createRouter({
     history: createWebHashHistory(), // history: createWebHistory(process.env.BASE_URL),
     routes
 })
-
 export default router

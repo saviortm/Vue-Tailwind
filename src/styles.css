@@ -23,13 +23,25 @@ li {
     }
 
     .my__work__card {
-        width: 400px;
+        width: 300px;
         height: 330px;
         box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.08);
+        padding-top: 0;
     }
 
     .my__slide__card{
         box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.08);
+    }
+
+    .my__slide__pic {
+      width: 200px;
+    }
+
+    .work__card__pic1 {
+        width: 220px;
+    }
+    .work__card__pic2 {
+        width: 70px;
     }
 
 }

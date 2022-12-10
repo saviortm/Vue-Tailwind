@@ -1,32 +1,67 @@
 <template>
   <div>
     <div class="bg-transparent">
-      <div class="flex justify-between h-[100px] mx-[50px]">
-        <div class="self-center relative underline__style">
-          <ul class="flex space-x-8 font-normal text-base text-[#331B3B] max-lg:hidden">
-            <li><a href=""><router-link to="/">
+      <div class="flex justify-between h-[100px] mx-[50px] max-sm:mx-2">
+        <div class="self-center relative underline__style max-lg:mt-48 max-lg:z-20 max-lg:bg-[rgba(255,222,212,0.3)] max-lg:absolute max-lg:left-0 max-lg:rounded-br-3xl" :class="{hidden:this.show}">
+          <ul class="flex space-x-8 font-normal text-base text-[#331B3B] max-lg:flex-col max-lg:space-y-4 max-lg:p-20">
+            <li class="max-lg:flex max-lg:justify-center"><a class="max-lg:p-1" href=""><router-link to="/">
               Home
             </router-link></a></li>
-            <li><a href=""><router-link to="/about">
+            <li><a class="max-lg:p-1" href=""><router-link to="/about">
               About Us
             </router-link></a></li>
-            <li><a href=""><router-link to="/services">
+            <li><a class="max-lg:p-1" href=""><router-link to="/services">
               Services
             </router-link></a></li>
-            <li><a href=""><router-link to="/contact">
+            <li><a class="max-lg:p-1" href=""><router-link to="/contact">
               Contact Us
             </router-link></a></li>
           </ul>
         </div>
-        <div class="self-center max-lg:order-first">
-          <h1 class="text-2xl tracking-widest text-[#331B3B] font-bold max-sm:text-xl">
+        <div class="self-center relative underline__style max-lg:mt-48 max-lg:z-20 max-lg:bg-[rgba(255,222,212,0.3)] max-lg:absolute max-lg:left-0 max-lg:rounded-br-3xl max-lg:hidden">
+          <ul class="flex space-x-8 font-normal text-base text-[#331B3B] max-lg:flex-col max-lg:space-y-4 max-lg:p-20">
+            <li class="max-lg:flex max-lg:justify-center"><a class="max-lg:p-1" href=""><router-link to="/">
+              Home
+            </router-link></a></li>
+            <li><a class="max-lg:p-1" href=""><router-link to="/about">
+              About Us
+            </router-link></a></li>
+            <li><a class="max-lg:p-1" href=""><router-link to="/services">
+              Services
+            </router-link></a></li>
+            <li><a class="max-lg:p-1" href=""><router-link to="/contact">
+              Contact Us
+            </router-link></a></li>
+          </ul>
+        </div>
+        <div class="flex order-first lg:hidden self-center cursor-pointer z-40" @click="showMenu" :class="{hidden:!this.show}" >
+          <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+          >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </div>
+        <div class="flex order-first lg:hidden self-center cursor-pointer z-40" @click="showMenu" :class="{hidden:this.show}">
+          <p class="font-[800] text-2xl text-[#331B3B]">&#x2715</p>
+        </div>
+        <div class="self-center z-20">
+          <h1 class="text-2xl tracking-widest text-[#331B3B] font-bold max-sm:text-xl max-lg:static">
             Dream Agency
           </h1>
         </div>
-        <div class="flex self-center space-x-2 z-20">
-          <img class="cursor-pointer max-sm:w-[55px]" src="../../assets/facebook.svg" alt="">
-          <img class="cursor-pointer max-sm:w-[55px]" src="../../assets/linkedin.svg" alt="">
-          <img class="cursor-pointer max-sm:w-[55px]" src="../../assets/instagram.svg" alt="">
+        <div class="flex self-center space-x-2 z-20 max-sm:space-x-0">
+          <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/facebook.svg" alt="">
+          <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/linkedin.svg" alt="">
+          <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/instagram.svg" alt="">
         </div>
       </div>
     </div>
@@ -35,7 +70,18 @@
 
 <script>
 export default {
-  name: "NavBar"
+  name: "NavBar",
+  data: function () {
+    return {
+      show: true
+    }
+  },
+methods: {
+  showMenu: function (){
+    this.show =! this.show;
+    console.log('Show is :' + this.show);
+  }
+  }
 }
 </script>
 
@@ -50,5 +96,21 @@ export default {
 }
 .underline__style ul li:hover a {
   font-weight: 500;
+}
+
+@media screen and (max-width: 1024px){
+
+  .underline__style ul li:hover a {
+    font-weight: 400;
+  }
+  .underline__style ul li a:hover {
+    background: #331B3B;
+    color: white;
+    border-radius: 1rem;
+  }
+  .underline__style ul li:hover a::before{
+    content: '';
+    position: static;
+  }
 }
 </style>

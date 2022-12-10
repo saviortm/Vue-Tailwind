@@ -29,13 +29,11 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: "Header"
 }
 </script>
-
 <style scoped>
 .line__style__header::before{
   content: '';

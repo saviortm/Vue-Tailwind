@@ -10,8 +10,8 @@
         </div>
         <div class="basis-3/4 mt-14 max-lg:mx-[50px] ">
           <div class="flex flex-row justify-center space-x-16 max-lg:flex-col max-lg:space-y-16 max-lg:grid max-lg:justify-items-center max-lg:space-x-0">
-            <div class="flex w-[448px] h-[310px] shadow-[0px_0px_7px_1px_rgba(0,0,0,0.08)] max-md:w-[70%] max-sm:w-[66%]">
-              <div class="flex flex-col p-10 self-center">
+            <div class="flex w-[448px] h-[310px] shadow-[0px_0px_7px_1px_rgba(0,0,0,0.08)] max-md:w-[70%] max-sm:w-[80%]">
+              <div class="flex flex-col p-10 self-center max-sm:py-0">
                 <div class="basis-2/6">
                   <img class="max-sm:w-[20px]" src="../../assets/testimonia.png" alt="">
                 </div>
@@ -25,8 +25,8 @@
                 </div>
               </div>
             </div>
-            <div class="flex w-[448px] h-[310px] shadow-[0px_0px_7px_1px_rgba(0,0,0,0.08)] max-md:w-[70%] max-sm:w-[66%]">
-              <div class="flex flex-col p-10 self-center">
+            <div class="flex w-[448px] h-[310px] shadow-[0px_0px_7px_1px_rgba(0,0,0,0.08)] max-md:w-[70%] max-sm:w-[80%]">
+              <div class="flex flex-col p-10 self-center max-sm:py-0">
                 <div class="basis-2/6">
                   <img class="max-sm:w-[20px]" src="../../assets/testimonia.png" alt="">
                 </div>

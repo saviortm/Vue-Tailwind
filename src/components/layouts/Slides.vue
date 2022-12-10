@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="relative mt-40 h-[650px] w-full">
+    <div class="relative mt-40 h-[650px] w-full max-sm:h-[520px]">
       <div class="absolute top-0 left-0 w-[88%] h-[576px]  bg-[#ECF7FF] rounded-tr-[400px] -z-10 max-sm:h-[450px] max-sm:top-[5%]">
       </div>
       <div class="">
@@ -87,8 +87,8 @@
           </div>
         </div>
       </div>
-      <div class="absolute bottom-0 right-0 -z-30 ">
-        <img class="max-xl:w-[450px] max-lg:w-[400px] max-md:w-[350px] max-sm:w-[250px]" src="@/assets/slide.png" alt="">
+      <div class="absolute bottom-0 right-0 -z-30">
+        <img class="max-xl:w-[450px] max-lg:w-[400px] max-md:w-[350px] max-sm:w-[250px] my__slide__pic" src="@/assets/slide.png" alt="">
       </div>
     </div>
   </div>

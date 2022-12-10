@@ -37,8 +37,8 @@
                     <div class="w-[419px] h-[365px] bg-white rounded-lg my__work__card">
                       <div class="flex flex-col space-y-4">
                         <div class="flex flex-row justify-center p-2">
-                          <img class="w-[286px] h-[228px] self-center" src="@/assets/worksllg.svg">
-                          <img class="w-[89px] h-[238px] self-center" src="@/assets/workslsm.svg">
+                          <img class="w-[286px] h-[228px] self-center work__card__pic1" src="@/assets/worksllg.svg">
+                          <img class="w-[89px] h-[238px] self-center work__card__pic2" src="@/assets/workslsm.svg">
                         </div>
                         <div class="flex flex-row justify-between px-4 text-[#331B3B]">
                           <p class="font-bold text-[#331B3B] text-2xl">UI Soup</p>
@@ -55,8 +55,8 @@
                     <div class="w-[419px] h-[365px] bg-white rounded-lg  my__work__card">
                       <div class="flex flex-col space-y-4">
                         <div class="flex flex-row justify-center p-2">
-                          <img class="w-[286px] h-[228px] self-center" src="@/assets/worksllg2.svg">
-                          <img class="w-[89px] h-[238px] self-center" src="@/assets/workslsm2.svg">
+                          <img class="w-[286px] h-[228px] self-center work__card__pic1" src="@/assets/worksllg2.svg">
+                          <img class="w-[89px] h-[238px] self-center work__card__pic2" src="@/assets/workslsm2.svg">
                         </div>
                         <div class="flex flex-row justify-between px-4 text-[#331B3B]">
                           <p class="font-bold text-[#331B3B] text-2xl">Goldcrown Labs</p>
@@ -73,8 +73,8 @@
                     <div class="w-[419px] h-[365px] bg-white rounded-lg my__work__card">
                       <div class="flex flex-col space-y-4">
                         <div class="flex flex-row justify-center p-2">
-                          <img class="w-[286px] h-[228px] self-center" src="@/assets/worksllg2.svg">
-                          <img class="w-[89px] h-[238px] self-center" src="@/assets/workslsm2.svg">
+                          <img class="w-[286px] h-[228px] self-center work__card__pic1" src="@/assets/worksllg2.svg">
+                          <img class="w-[89px] h-[238px] self-center work__card__pic2" src="@/assets/workslsm2.svg">
                         </div>
                         <div class="flex flex-row justify-between px-4 text-[#331B3B]">
                           <p class="font-bold text-[#331B3B] text-2xl">Goldcrown Labs</p>
@@ -91,8 +91,8 @@
                     <div class="w-[419px] h-[365px] bg-white rounded-lg my__work__card">
                       <div class="flex flex-col space-y-4">
                         <div class="flex flex-row justify-center p-2">
-                          <img class="w-[286px] h-[228px] self-center" src="@/assets/worksllg2.svg">
-                          <img class="w-[89px] h-[238px] self-center" src="@/assets/workslsm2.svg">
+                          <img class="w-[286px] h-[228px] self-center work__card__pic1" src="@/assets/worksllg2.svg">
+                          <img class="w-[89px] h-[238px] self-center work__card__pic2" src="@/assets/workslsm2.svg">
                         </div>
                         <div class="flex flex-row justify-between px-4 text-[#331B3B]">
                           <p class="font-bold text-[#331B3B] text-2xl">Goldcrown Labs</p>
@@ -241,13 +241,14 @@ export default {
 {
   .works .swiper {
     padding-left: 10px;
+    height: 400px;
   }
   .works .swiper-button-next {
-    top: 70%!important;
-    left: 9%!important;
+    top: 90%!important;
+    left: 10%!important;
   }
   .works .swiper-button-prev{
-    top: 70%!important;
+    top: 90%!important;
   }
 
 }

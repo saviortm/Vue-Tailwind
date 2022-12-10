@@ -11,11 +11,11 @@
               <p class="font-bold">About Us</p>
               <p class="relative font-light">Fake or <span class="z-10 line__style__about relative ">Real</span></p>
             </div>
-            <div class="flex flex-col font-normal text-lg mt-5 mr-[59px] text-[rgba(51,27,59,0.66)] max-xl:text-base max-lg:mx-0  max-lg:grid max-lg:justify-items-center max-sm:text-sm">
-              <p class="max-lg:w-[80%] max-lg:mx-0">Lorem Ipsum has been the industry's standard dummy text
+            <div class="flex flex-col font-normal text-lg mt-5 mr-[59px] text-[rgba(51,27,59,0.66)] max-xl:text-base max-lg:mx-0  max-lg:grid max-lg:justify-items-center">
+              <p class="max-lg:w-[80%] max-lg:mx-0  max-sm:w-[120%]">Lorem Ipsum has been the industry's standard dummy text
                 ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book.</p>
-              <p class="mt-2.5 max-lg:w-[80%] max-lg:mx-0">Lorem Ipsum has been the industry's standard dummy text
+              <p class="mt-2.5 max-lg:w-[80%] max-lg:mx-0 max-sm:w-[120%]">Lorem Ipsum has been the industry's standard dummy text
                 ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book.</p>
             </div>
