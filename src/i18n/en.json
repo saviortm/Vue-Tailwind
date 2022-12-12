@@ -1,0 +1,56 @@
+{
+  "title": "Dream Agency",
+  "pages": {
+    "first": "Home",
+    "second": "About Us",
+    "third": "Services",
+    "fourth": "Contact Us"
+  },
+  "headers": {
+    "first": "We Help You",
+    "second": "to grow your",
+    "third": "Business"
+  },
+  "buttons": {
+    "start": "get started",
+    "explore": "explore more",
+    "email": "send",
+    "card": "View Work"
+  },
+  "switchLang": "Eng",
+  "slides": {
+    "first": "What We Do",
+    "second": "For Your ",
+    "third": "Business"
+  },
+  "about": {
+    "first": "About Us",
+    "second": "Fake or",
+    "third": "Real"
+  },
+  "works": {
+    "first": "Our Recent Work",
+    "second": "By Our",
+    "third": "Experts"
+  },
+  "testimonials": {
+    "first": "Our Testimonials",
+    "second": "What Our Clients Are",
+    "third": "Saying"
+  },
+  "footer": {
+    "first": "Dream Agency",
+    "second": "get in touch"
+  },
+  "placeholder": "ENTER YOUR EMAIL",
+  "slcards": {
+    "first": "website design",
+    "second": "web development",
+    "third": "mobile app development"
+  },
+  "wrcards": {
+    "first": "",
+    "second": "Goldcrown Labs"
+  }
+
+}

@@ -8,8 +8,8 @@
           <div class="basis-1/4 mt-[53px] mx-[50px]">
             <div class="flex flex-row justify-between max-lg:flex-col">
               <div class="flex flex-col text-5xl tracking-[-0.01em] text-[331B3B] max-xl:text-4xl max-lg:text-3xl max-lg:grid max-lg:justify-items-center">
-                <p class="font-bold">Our Recent Work</p>
-                <p class="font-light">By Our <span class="relative line__style__works z-10">Experts</span></p>
+                <p class="font-bold">{{$t('works.first')}} </p>
+                <p class="font-light">{{$t('works.second')}}  <span class="relative line__style__works z-10">{{$t('works.third')}} </span></p>
               </div>
               <div class="max-lg:grid max-lg:justify-items-center max-lg:mt-5">
                 <p class="font-normal text-lg w-[515px] text-[#331B3B] max-xl:text-base max-sm:text-sm max-sm:w-[90%]">Lorem Ipsum has been the industry's
@@ -24,7 +24,6 @@
                   :options="swiperOptions"
                   :breakpoints="swiperOptions.breakpoints"
                   :modules="modules"
-                  space-between="10"
                   navigation
                   :scrollbar="{ draggable: false }"
                   @swiper="onSwiper"
@@ -43,7 +42,7 @@
                         <div class="flex flex-row justify-between px-4 text-[#331B3B]">
                           <p class="font-bold text-[#331B3B] text-2xl">UI Soup</p>
                           <div class="cursor-pointer">
-                            <p class="border-2 border-solid rounded-2xl border-[#331B3B] font-medium text-sm px-1">View Work</p>
+                            <p class="border-2 border-solid rounded-2xl border-[#331B3B] font-medium text-sm px-1">{{$t('buttons.card')}}</p>
                           </div>
                         </div>
                       </div>
@@ -59,7 +58,25 @@
                           <img class="w-[89px] h-[238px] self-center work__card__pic2" src="@/assets/workslsm2.svg">
                         </div>
                         <div class="flex flex-row justify-between px-4 text-[#331B3B]">
-                          <p class="font-bold text-[#331B3B] text-2xl">Goldcrown Labs</p>
+                          <p class="font-bold text-[#331B3B] text-2xl">{{$t('wrcards.second')}}</p>
+                          <div class="cursor-pointer">
+                            <p class=" border-2 border-solid rounded-2xl border-[#331B3B] font font-medium text-sm px-1">{{$t('buttons.card')}}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </swiper-slide>
+                <swiper-slide class="flex justify-center">
+                  <div>
+                    <div class="w-[419px] h-[365px] bg-white rounded-lg my__work__card">
+                      <div class="flex flex-col space-y-4">
+                        <div class="flex flex-row justify-center p-2">
+                          <img class="w-[286px] h-[228px] self-center work__card__pic1" src="@/assets/worksllg2.svg">
+                          <img class="w-[89px] h-[238px] self-center work__card__pic2" src="@/assets/workslsm2.svg">
+                        </div>
+                        <div class="flex flex-row justify-between px-4 text-[#331B3B]">
+                          <p class="font-bold text-[#331B3B] text-2xl">{{$t('wrcards.second')}}</p>
                           <div class="cursor-pointer">
                             <p class=" border-2 border-solid rounded-2xl border-[#331B3B] font font-medium text-sm px-1">View Work</p>
                           </div>
@@ -77,25 +94,7 @@
                           <img class="w-[89px] h-[238px] self-center work__card__pic2" src="@/assets/workslsm2.svg">
                         </div>
                         <div class="flex flex-row justify-between px-4 text-[#331B3B]">
-                          <p class="font-bold text-[#331B3B] text-2xl">Goldcrown Labs</p>
-                          <div class="cursor-pointer">
-                            <p class=" border-2 border-solid rounded-2xl border-[#331B3B] font font-medium text-sm px-1">View Work</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </swiper-slide>
-                <swiper-slide class="flex justify-center">
-                  <div>
-                    <div class="w-[419px] h-[365px] bg-white rounded-lg my__work__card">
-                      <div class="flex flex-col space-y-4">
-                        <div class="flex flex-row justify-center p-2">
-                          <img class="w-[286px] h-[228px] self-center work__card__pic1" src="@/assets/worksllg2.svg">
-                          <img class="w-[89px] h-[238px] self-center work__card__pic2" src="@/assets/workslsm2.svg">
-                        </div>
-                        <div class="flex flex-row justify-between px-4 text-[#331B3B]">
-                          <p class="font-bold text-[#331B3B] text-2xl">Goldcrown Labs</p>
+                          <p class="font-bold text-[#331B3B] text-2xl">{{$t('wrcards.second')}}</p>
                           <div class="cursor-pointer">
                             <p class=" border-2 border-solid rounded-2xl border-[#331B3B] font font-medium text-sm px-1">View Work</p>
                           </div>

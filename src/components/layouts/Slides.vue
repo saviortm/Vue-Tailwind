@@ -7,8 +7,8 @@
         <div class="flex flex-col">
           <div class="basis-5/12 flex justify-center mt-24 mx-[50px] max-sm:mt-4">
             <div class="text-[#331B3B] tracking-[-0.01em] z-10 text-5xl max-xl:text-4xl  max-lg:text-3xl">
-              <p class="font-bold flex justify-center">What We Do</p>
-              <p class="relative line__style__slides font-light flex justify-center">For Your <span class="z-10">Business</span></p>
+              <p class="font-bold flex justify-center">{{$t('slides.first')}}</p>
+              <p class="relative line__style__slides font-light flex justify-center">{{$t('slides.second')}}  &nbsp;<span class="z-10">{{$t('slides.third')}}</span></p>
             </div>
           </div>
           <div class="basis-7/12 mt-24 ml-18 z-10 flex mr-40  mx-[50px] max-sm:mx-0 slides">
@@ -29,7 +29,7 @@
                     <div class="flex flex-col p-4 space-y-2">
                       <img class="w-[52px] h-[48px]" src="@/assets/worldsl.svg">
                       <div>
-                        <p class="uppercase font-bold text-base text-[#331B3B]">website design</p>
+                        <p class="uppercase font-bold text-base text-[#331B3B]">{{$t('slcards.first')}}</p>
                       </div>
                       <div>
                         <p class="text-[rgba(51,27,59,0.66)] font-light text-sm">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
@@ -44,7 +44,7 @@
                     <div class="flex flex-col p-4 space-y-2">
                       <img class="w-[52px] h-[48px]" src="@/assets/compsl.svg">
                       <div>
-                        <p class="uppercase font-bold text-base text-[#331B3B]">mobile app development</p>
+                        <p class="uppercase font-bold text-base text-[#331B3B]">{{$t('slcards.second')}}</p>
                       </div>
                       <div>
                         <p class="text-[rgba(51,27,59,0.66)] font-light text-sm">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
@@ -59,7 +59,7 @@
                     <div class="flex flex-col p-4 space-y-2">
                       <img class="w-[52px] h-[48px]" src="@/assets/phonesl.svg">
                       <div>
-                        <p class="uppercase font-bold text-base text-[#331B3B]">mobile app development</p>
+                        <p class="uppercase font-bold text-base text-[#331B3B]">{{$t('slcards.third')}}</p>
                       </div>
                       <div>
                         <p class="text-[rgba(51,27,59,0.66)] font-light text-sm">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
@@ -74,7 +74,7 @@
                     <div class="flex flex-col p-4 space-y-2">
                       <img class="w-[52px] h-[48px]" src="@/assets/worldsl.svg">
                       <div>
-                        <p class="uppercase font-bold text-base text-[#331B3B]">web development</p>
+                        <p class="uppercase font-bold text-base text-[#331B3B]">{{$t('slcards.first')}}</p>
                       </div>
                       <div>
                         <p class="text-[rgba(51,27,59,0.66)] font-light text-sm">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>

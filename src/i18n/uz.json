@@ -1,0 +1,55 @@
+{
+  "title": "Orzu Agentligi",
+  "pages": {
+    "first": "Bosh sahifa",
+    "second": "Haqimizda",
+    "third": "Xizmatlar",
+    "fourth": "Bog'lanish"
+  },
+  "headers": {
+    "first": "Biznesingizni",
+    "second": "rivojlantirishga yordam",
+    "third": "Beramiz"
+  },
+  "buttons": {
+    "start": "boshlash",
+    "explore": "ko'proq o'rganish",
+    "email": "yuborish",
+    "card": "Ishni Ko'rish"
+  },
+  "switchLang": "Uz",
+  "slides": {
+    "first": "Biznesingiz Uchun",
+    "second": "Biz Nimalar",
+    "third": "Qilolishimiz"
+  },
+  "about": {
+    "first": "Biz Haqimizda",
+    "second": "Soxta yoki",
+    "third": "Haqiqiy"
+  },
+  "works": {
+    "first": "Ekspertlarimiz Tomonidan",
+    "second": "So'ngi",
+    "third": "Ishimizlarimiz"
+  },
+  "testimonials": {
+    "first": "Biz Haqimizda",
+    "second": "Mijozlarimizning",
+    "third": "Fikrlari"
+  },
+  "footer": {
+    "first": "Orzu Agentligi",
+    "second": "Bog'laning"
+  },
+  "placeholder": "POCHTANGIZNI KIRITING",
+  "slcards": {
+    "first": "veb-sayt dizayni",
+    "second": "veb-ishlab chiqish",
+    "third": "mobil ilovalar ishlash"
+  },
+  "wrcards": {
+    "first": "",
+    "second": "Oltin toj Lab"
+  }
+}
