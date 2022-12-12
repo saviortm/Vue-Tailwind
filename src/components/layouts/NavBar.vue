@@ -112,16 +112,16 @@ export default {
 }
 </script>
 
-<script setup>
-import { useI18n } from 'vue-i18n';
+<!--<script setup>-->
+<!--import { useI18n } from 'vue-i18n';-->
 
-const { t, locale } = useI18n({useScope: 'global'})
+<!--const { t, locale } = useI18n({useScope: 'global'})-->
 
-const switchLangFunc = () => {
-  locale.value === 'en' ? locale.value = 'uz' : locale.value = 'en';
-  console.log('Language: '+ locale.value);
-}
-</script>
+<!--const switchLangFunc = () => {-->
+<!--  locale.value === 'en' ? locale.value = 'uz' : locale.value = 'en';-->
+<!--  console.log('Language: '+ locale.value);-->
+<!--}-->
+<!--</script>-->
 
 <style scoped>
 .underline__style ul li:hover a::before {
