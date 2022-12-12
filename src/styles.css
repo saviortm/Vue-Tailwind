@@ -17,6 +17,10 @@ li {
     cursor: pointer !important;
 }
 
+.modal__checkbox {
+    accent-color: #5f1e75;
+}
+
 @media screen and (max-width: 500px){
     .header__height {
         height: 400px;
