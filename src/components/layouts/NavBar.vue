@@ -81,7 +81,7 @@
         </div>
         <div class="flex self-center space-x-2 z-20 max-sm:space-x-0">
           <span class="text-xl font-semibold text-[#331B3B] self-center cursor-pointer"
-                @click="switchLangFunc">{{ $t('switchLang') }}</span>
+                @click="switchLang">{{ $t('switchLang') }}</span>
           <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/facebook.svg" alt="">
           <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/linkedin.svg" alt="">
           <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/instagram.svg" alt="">
@@ -92,6 +92,7 @@
 </template>
 
 <script>
+
 export default {
   name: "NavBar",
   data: function () {
@@ -109,19 +110,19 @@ export default {
       console.log('Show is :' + this.show);
     },
   }
+
 }
 </script>
 
-<!--<script setup>-->
-<!--import { useI18n } from 'vue-i18n';-->
+<script setup>
+import { useI18n } from 'vue-i18n';
+const { t, locale } = useI18n({useScope: 'global'})
 
-<!--const { t, locale } = useI18n({useScope: 'global'})-->
-
-<!--const switchLangFunc = () => {-->
-<!--  locale.value === 'en' ? locale.value = 'uz' : locale.value = 'en';-->
-<!--  console.log('Language: '+ locale.value);-->
-<!--}-->
-<!--</script>-->
+const switchLang = () => {
+  locale.value === 'en' ? locale.value = 'uz' : locale.value = 'en';
+  console.log('Language: '+ locale.value);
+}
+</script>
 
 <style scoped>
 .underline__style ul li:hover a::before {
