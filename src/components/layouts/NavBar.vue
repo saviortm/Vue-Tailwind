@@ -4,7 +4,7 @@
       <div class="flex justify-between h-[100px] mx-[50px] max-sm:mx-2">
         <div
             class="self-center relative underline__style max-lg:mt-48 max-lg:z-20 max-lg:bg-[rgba(255,222,212,0.3)] max-lg:absolute max-lg:left-0 max-lg:rounded-br-3xl"
-            v-if="this.show !== 1">
+            v-if="show !== 1">
           <ul class="flex space-x-8 font-normal text-base text-[#331B3B] max-lg:flex-col max-lg:space-y-4 max-lg:p-20">
             <li class="max-lg:flex max-lg:justify-center"><a class="max-lg:p-1" href="">
               <router-link to="/">
@@ -54,7 +54,7 @@
           </ul>
         </div>
         <div class="flex order-first lg:hidden self-center cursor-pointer z-40" @click="showMenu"
-             v-if="this.show !== 0">
+             v-if="show !== 0">
           <svg
               xmlns="http://www.w3.org/2000/svg"
               class="w-6 h-6"
@@ -71,7 +71,7 @@
           </svg>
         </div>
         <div class="flex order-first lg:hidden self-center cursor-pointer z-40" @click="showMenu"
-             v-if="this.show !== 1">
+             v-if="show !== 1">
           <p class="font-[800] text-2xl text-[#331B3B]">&#x2715</p>
         </div>
         <div class="self-center z-20">
