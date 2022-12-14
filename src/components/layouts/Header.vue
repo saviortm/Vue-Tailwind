@@ -77,7 +77,8 @@
     </div>
     </transition>
     <!-- Success alert -->
-    <div v-if="alterSuccess" class="fixed top-0 right-0 z-50 px-8 py-6 bg-green-400 text-white flex justify-between rounded">
+    <Transition name="slide-fade-success">
+    <div v-if="alertSuccess" class="fixed top-0 right-0 z-50 px-8 py-6 bg-green-400 text-white flex justify-between rounded">
       <div class="flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-6" viewBox="0 0 20 20" fill="currentColor">
           <path
@@ -92,22 +93,27 @@
         </svg>
       </button>
     </div>
+    </Transition>
     <!-- Danger alert -->
-    <div v-if="alterDanger" class="fixed top-0 right-0 z-50  px-8 py-6 bg-red-400 text-white flex justify-between rounded">
-      <div class="flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-6" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
-        </svg>
-        <p>Danger! This is an error alert—check it out!</p>
+    <Transition name="slide-fade-danger">
+      <div v-if="alertDanger" class="fixed top-0 right-0 z-50  px-8 py-6 bg-red-400 text-white flex justify-between rounded">
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-6" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+          </svg>
+          <p>Danger! This is an error alert—check it out!</p>
+        </div>
+        <button @click="closeAlterWrong" class="text-red-100 hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
-      <button @click="closeAlterWrong" class="text-red-100 hover:text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
+    </Transition>
   </div>
 </template>
+
+<!-----   script tag   ------>
 <script>
 import useValidate from '@vuelidate/core'
 import { required, email, minLength } from '@vuelidate/validators'
@@ -120,14 +126,12 @@ export default {
       email: '',
       password:'',
     })
-
     const rules = computed(() =>{
       return{
         email: {required, email},
         password: {required, minLength: minLength(6)},
       }
     })
-
     const v$ = useValidate(rules, state)
     return {
       state,
@@ -138,8 +142,8 @@ export default {
   data: function () {
     return {
       modal: false,
-      alterSuccess: false,
-      alterDanger: false,
+      alertSuccess: false,
+      alertDanger: false,
     };
   },
   computed: {
@@ -157,20 +161,20 @@ export default {
     submitForm() {
       this.v$.$validate()
       if(!this.v$.$error) {
-        this.alterSuccess = true;
-        setTimeout(() => this.alterSuccess = false, 3000)
+        this.alertSuccess = true;
+        setTimeout(() => this.alertSuccess = false, 3000)
         setTimeout(() => this.modal = false, 500)
 
       } else {
-        this.alterDanger = true;
-        setTimeout(() => this.alterDanger = false, 3000)
+        this.alertDanger = true;
+        setTimeout(() => this.alertDanger = false, 3000)
       }
     },
     closeAlterSuccess(){
-      this.alterSuccess = false
+      this.alertSuccess = false
     },
     closeAlterWrong(){
-      this.alterDanger = false
+      this.alertDanger = false
     }
   },
 }
@@ -185,7 +189,7 @@ export default {
   bottom: 12%;
   z-index: -10;
 }
-
+/*-----------------transition modal----------------*/
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
@@ -195,5 +199,35 @@ export default {
 .fade-leave-active {
   transition: opacity 1000ms ease-out;
 }
+/*------------transition alert danger----------------*/
 
+.slide-fade-danger-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-danger-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-danger-enter-from,
+.slide-fade-danger-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+/*------------transition alert success----------------*/
+
+.slide-fade-success-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-success-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-success-enter-from,
+.slide-fade-success-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
 </style>
