@@ -18,7 +18,8 @@
             </div>
           </div>
         </div>
-        <div class="basis-7/12 max-lg: ">
+        <!-- Photo -->
+        <div class="basis-7/12">
           <div class="header__height max-lg:relative max-lg:h-[550px] max-sm:h-[520px]">
           </div>
           <div class="absolute right-0 top-0">
@@ -28,7 +29,7 @@
       </div>
     </div>
     <!-- Main modal -->
-    <div v-if="this.modal" id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full flex backdrop-blur-sm">
+    <div v-if="this.modal" id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full flex backdrop-blur-sm ">
       <div class="relative w-full h-full md:h-auto flex justify-center self-center">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow w-2/5">
@@ -41,22 +42,28 @@
             <form class="space-y-6" action="#">
               <div>
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com" required>
+                <input v-model="state.email"  type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com" required>
+                <span v-if="v$.email.$error">
+                  {{v$.email.$errors[0].$message}}
+                </span>
               </div>
               <div>
                 <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+                <input v-model="state.password"  type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+                <span v-if="v$.password.$error">
+                  {{v$.password.$errors[0].$message}}
+                </span>
               </div>
               <div class="flex justify-between">
                 <div class="flex items-start">
                   <div class="flex items-center h-5">
-                    <input id="remember" type="checkbox" value="" class="modal__checkbox w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-[#5f1e75]" required>
+                    <input id="remember" type="checkbox" value="" class="modal__checkbox w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-[#5f1e75]">
                   </div>
                   <label for="remember" class="ml-2 text-sm font-medium text-gray-900">Remember me</label>
                 </div>
                 <a href="#" class="text-sm text-[#331B3B] hover:underline dark:text-blue-500">Lost Password?</a>
               </div>
-              <button type="submit" class="w-full text-white bg-[#331B3B] hover:bg-[#240230] focus:ring-4 focus:outline-none focus:ring-[#5f1e75] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login to your account</button>
+              <button @click="submitForm" type="submit" class="w-full text-white bg-[#331B3B] hover:bg-[#240230] focus:ring-4 focus:outline-none focus:ring-[#5f1e75] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login to your account</button>
               <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
                 Not registered? <a href="#" class="text-[#331B3B] hover:underline">Create account</a>
               </div>
@@ -65,29 +72,99 @@
         </div>
       </div>
     </div>
-
-
-
+    <!-- Success alert -->
+    <div v-if="alterSuccess" class="fixed top-0 right-0 z-50 px-8 py-6 bg-green-400 text-white flex justify-between rounded">
+      <div class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-6" viewBox="0 0 20 20" fill="currentColor">
+          <path
+              d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"
+          />
+        </svg>
+        <p>Success! This is a success alert—check it out!</p>
+      </div>
+      <button @click="closeAlterSuccess" class="text-green-100 hover:text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <!-- Danger alert -->
+    <div v-if="alterDanger" class="fixed top-0 right-0 z-50  px-8 py-6 bg-red-400 text-white flex justify-between rounded">
+      <div class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-6" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+        </svg>
+        <p>Danger! This is an error alert—check it out!</p>
+      </div>
+      <button @click="closeAlterWrong" class="text-red-100 hover:text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
   </div>
 </template>
 <script>
+import useValidate from '@vuelidate/core'
+import { required, email, minLength } from '@vuelidate/validators'
+import { reactive, computed } from "vue";
+
 export default {
+  setup()
+  {
+    const state = reactive({
+      email: '',
+      password:'',
+    })
+
+    const rules = computed(() =>{
+      return{
+        email: {required, email},
+        password: {required, minLength: minLength(6)},
+      }
+    })
+
+    const v$ = useValidate(rules, state)
+    return {
+      state,
+      v$,
+    }
+  },
   name: "Header",
   data: function () {
-    return{
-      modal: false
+    return {
+      modal: false,
+      alterSuccess: false,
+      alterDanger: false,
     }
   },
   methods: {
     showModalopen: function () {
       this.modal = true
-      console.log('Modal is '+ this.modal)
     },
     showModalclose: function () {
       this.modal = false
-      console.log('Modal is '+ this.modal)
+    },
+    submitForm() {
+      this.v$.$validate()
+      if(!this.v$.$error) {
+        this.alterSuccess = true;
+        setTimeout(() => this.alterSuccess = false, 5000)
+        console.log('submit form is working 1')
+
+      } else {
+        this.alterDanger = true;
+        setTimeout(() => this.alterDanger = false, 5000)
+        console.log('submit form is working 2')
+      }
+    },
+    closeAlterSuccess(){
+      this.alterSuccess = false
+    },
+    closeAlterWrong(){
+      this.alterDanger = false
     }
-  }
+  },
 }
 </script>
 <style scoped>
