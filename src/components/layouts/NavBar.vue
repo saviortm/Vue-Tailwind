@@ -6,7 +6,7 @@
             class="self-center relative underline__style max-lg:mt-48 max-lg:z-20 max-lg:bg-[rgba(255,222,212,0.3)] max-lg:absolute max-lg:left-0 max-lg:rounded-br-3xl"
             v-if="show !== 1">
           <ul class="flex space-x-8 font-normal text-base text-[#331B3B] max-lg:flex-col max-lg:space-y-4 max-lg:p-20">
-            <li class="max-lg:flex max-lg:justify-center"><a class="max-lg:p-1" href="">
+            <li class="max-lg:flex max-lg:justify-center"><a class="max-lg:p-1 hover:no-underline" href="">
               <router-link to="/">
                 {{$t('pages.first')}}
               </router-link>
@@ -31,7 +31,7 @@
         <div
             class="self-center relative underline__style max-lg:mt-48 max-lg:z-20 max-lg:bg-[rgba(255,222,212,0.3)] max-lg:absolute max-lg:left-0 max-lg:rounded-br-3xl max-lg:hidden">
           <ul class="flex space-x-8 font-normal text-base text-[#331B3B] max-lg:flex-col max-lg:space-y-4 max-lg:p-20">
-            <li class="max-lg:flex max-lg:justify-center"><a class="max-lg:p-1" href="">
+            <li class="max-lg:flex max-lg:justify-center hover:no-underline"><a class="max-lg:p-1 hover:no-underline" href="">
               <router-link to="/">
                 {{$t('pages.first')}}
               </router-link>

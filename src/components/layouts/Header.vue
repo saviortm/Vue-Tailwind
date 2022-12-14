@@ -13,7 +13,7 @@
           <p class=" font-normal text-lg max-xl:text-base  tracking-wide mb-8 text-[#331B3B]  max-xl:w-[85%] max-lg:w-[80%] max-sm:text-sm">Lorem Ipsum has been the industry's standard dummy
             text ever since the 1500s, when an unknown printer took a galley of
             type and scrambled it to make a type specimen book.</p>
-          <div @click="showModalopen" class="cursor-pointer flex justify-center w-52 h-16 bg-[#331B3B] rounded-xl max-xl:w-48 max-xl:h-14 max-md:w-40 max-md:h-12 max-sm:w-32 max-sm:h-10">
+          <div @click="showModalOpen" class="cursor-pointer flex justify-center w-52 h-16 bg-[#331B3B] rounded-xl max-xl:w-48 max-xl:h-14 max-md:w-40 max-md:h-12 max-sm:w-32 max-sm:h-10">
             <div  class="flex self-center justify-center text-white w-28 h-6"><p class="font-bold text-base max-xl:text-sm uppercase max-sm:font-semibold">{{$t('buttons.start')}}</p>
             </div>
           </div>
@@ -28,12 +28,14 @@
         </div>
       </div>
     </div>
+    <transition name="fade">
     <!-- Main modal -->
-    <div v-if="this.modal" id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full flex backdrop-blur-sm ">
+    <div v-if="modal" id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full flex backdrop-blur-sm ">
       <div class="relative w-full h-full md:h-auto flex justify-center self-center">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow w-2/5">
-          <button @click="showModalclose" type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="authentication-modal">
+
+        <div v-if="isModalVisible" class="relative bg-white rounded-lg shadow w-2/5">
+          <button @click="showModalClose" type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="authentication-modal">
             <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             <span class="sr-only">Close modal</span>
           </button>
@@ -63,15 +65,17 @@
                 </div>
                 <a href="#" class="text-sm text-[#331B3B] hover:underline dark:text-blue-500">Lost Password?</a>
               </div>
-              <button @click="submitForm" type="submit" class="w-full text-white bg-[#331B3B] hover:bg-[#240230] focus:ring-4 focus:outline-none focus:ring-[#5f1e75] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login to your account</button>
+              <button @click="submitForm" type="button" class="w-full text-white bg-[#331B3B] hover:bg-[#240230] focus:ring-4 focus:outline-none focus:ring-[#5f1e75] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login to your account</button>
               <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
                 Not registered? <a href="#" class="text-[#331B3B] hover:underline">Create account</a>
               </div>
             </form>
           </div>
         </div>
+
       </div>
     </div>
+    </transition>
     <!-- Success alert -->
     <div v-if="alterSuccess" class="fixed top-0 right-0 z-50 px-8 py-6 bg-green-400 text-white flex justify-between rounded">
       <div class="flex items-center">
@@ -136,26 +140,30 @@ export default {
       modal: false,
       alterSuccess: false,
       alterDanger: false,
+    };
+  },
+  computed: {
+    isModalVisible() {
+      return this.modal;
     }
   },
   methods: {
-    showModalopen: function () {
+    showModalOpen: function () {
       this.modal = true
     },
-    showModalclose: function () {
+    showModalClose: function () {
       this.modal = false
     },
     submitForm() {
       this.v$.$validate()
       if(!this.v$.$error) {
         this.alterSuccess = true;
-        setTimeout(() => this.alterSuccess = false, 5000)
-        console.log('submit form is working 1')
+        setTimeout(() => this.alterSuccess = false, 3000)
+        setTimeout(() => this.modal = false, 500)
 
       } else {
         this.alterDanger = true;
-        setTimeout(() => this.alterDanger = false, 5000)
-        console.log('submit form is working 2')
+        setTimeout(() => this.alterDanger = false, 3000)
       }
     },
     closeAlterSuccess(){
@@ -177,4 +185,15 @@ export default {
   bottom: 12%;
   z-index: -10;
 }
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1000ms ease-out;
+}
+
 </style>
