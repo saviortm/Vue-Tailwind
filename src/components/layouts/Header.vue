@@ -211,7 +211,7 @@ export default {
 
 .slide-fade-danger-enter-from,
 .slide-fade-danger-leave-to {
-  transform: translateX(20px);
+  transform: translateX(100px);
   opacity: 0;
 }
 
@@ -227,7 +227,7 @@ export default {
 
 .slide-fade-success-enter-from,
 .slide-fade-success-leave-to {
-  transform: translateX(20px);
+  transform: translateX(100px);
   opacity: 0;
 }
 </style>
