@@ -112,9 +112,9 @@
     <div class="w-full inset-0">
       <div class="relative rounded-xl overflow-auto p-8">
         <div class="flex justify-center">
-          <div @click="Jump" class="fixed right-0 bottom-0 mr-2 mb-2 animate-bounce bg-white p-2 w-10 h-10 ring-2 ring-white shadow-lg rounded-full flex items-center justify-center cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+          <div @click="Jump" class="fixed right-0 bottom-0 mr-2 mb-2 animate-bounce bg-white p-2 w-10 h-10 ring-2 ring-white shadow-lg rounded-full flex items-center justify-center cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 z-50">
             <svg class="w-6 h-6 text-[#331B3B] fixed_button" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+              <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
             </svg>
           </div>
         </div>
@@ -210,7 +210,7 @@ export default {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 1000ms ease-out;
+  transition: opacity 500ms ease-out;
 }
 /*------------transition alert danger----------------*/
 .slide-fade-danger-enter-active {

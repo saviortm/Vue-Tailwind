@@ -841,16 +841,16 @@ video {
   height: 24rem;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .h-2\.5 {
   height: 0.625rem;
 }
 
 .h-2 {
   height: 0.5rem;
-}
-
-.h-12 {
-  height: 3rem;
 }
 
 .w-52 {
@@ -933,6 +933,10 @@ video {
   width: 89px;
 }
 
+.w-1\/4 {
+  width: 25%;
+}
+
 .w-\[90\%\] {
   width: 90%;
 }
@@ -947,10 +951,6 @@ video {
 
 .w-3\/4 {
   width: 75%;
-}
-
-.w-1\/4 {
-  width: 25%;
 }
 
 .basis-1\/2 {
@@ -1584,20 +1584,20 @@ video {
   transition-duration: 150ms;
 }
 
-.duration-300 {
-  transition-duration: 300ms;
-}
-
-.duration-500 {
-  transition-duration: 500ms;
-}
-
 .duration-700 {
   transition-duration: 700ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .duration-200 {
   transition-duration: 200ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 .ease-in-out {
