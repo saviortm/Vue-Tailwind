@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-transparent">
+    <div id="contact-me" class="bg-transparent">
       <div class="flex justify-between h-[100px] mx-[50px] max-sm:mx-2">
         <div
             class="self-center relative underline__style max-lg:mt-48 max-lg:z-20 max-lg:bg-[rgba(255,222,212,0.3)] max-lg:absolute max-lg:left-0 max-lg:rounded-br-3xl"
