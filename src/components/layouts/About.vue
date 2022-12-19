@@ -2,10 +2,10 @@
   <div>
     <div class="max-lg:mx-[50px]">
       <div class="flex flex-row max-lg:flex-col">
-        <div class="basis-1/2 max-lg:w-full">
+        <div v-motion-slide-visible-top class="basis-1/2 max-lg:w-full transition duration-700">
           <img class="max-lg:mx-auto " src="../../assets/aboutus.png" alt="">
         </div>
-        <div class="basis-1/2  max-lg:grid max-lg:justify-items-center max-lg:mx-[50px]">
+        <div v-motion-slide-visible-bottom class="basis-1/2  max-lg:grid max-lg:justify-items-center max-lg:mx-[50px] transition duration-700">
           <div class="flex flex-col mt-72 max-xl:mt-64 max-lg:mt-0">
             <div class="flex flex-col text-5xl tracking-[-1%] space-y-2 text-[#331B3B] max-xl:text-4xl max-lg:text-3xl max-lg:grid max-lg:justify-items-center">
               <p class="font-bold">{{$t('about.first')}} </p>
