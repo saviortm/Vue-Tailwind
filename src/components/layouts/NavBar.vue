@@ -21,8 +21,8 @@
               </a>
             </li>
             <!-- hoverable dropdown menu min -->
-            <div class="hidden peer-hover:flex hover:flex absolute w-[400px] h-32 flex-row drop-shadow-lg">
-              <div class="basis-1/4">
+            <div class="hidden peer-hover:flex hover:flex absolute w-[400px] h-32 flex-row drop-shadow-lg max-sm:w-[200px]">
+              <div class="basis-1/2">
 
               </div>
               <div class="flex basis-1/2 flex-col">
