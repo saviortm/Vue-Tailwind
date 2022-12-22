@@ -6,51 +6,86 @@
             class="self-center relative underline__style max-lg:mt-48 max-lg:z-20 max-lg:bg-[rgba(255,222,212,0.3)] max-lg:absolute max-lg:left-0 max-lg:rounded-br-3xl"
             v-if="show !== 1">
           <ul class="flex space-x-8 font-normal text-base text-[#331B3B] max-lg:flex-col max-lg:space-y-4 max-lg:p-20">
-            <li class="max-lg:flex max-lg:justify-center"><a class="max-lg:p-1 hover:no-underline" href="">
-              <router-link to="/">
-                {{$t('pages.first')}}
-              </router-link>
-            </a></li>
-            <li><a class="max-lg:p-1" href="">
-              <router-link to="/about">
-                {{$t('pages.second')}}
-              </router-link>
-            </a></li>
-            <li><a class="max-lg:p-1" href="">
-              <router-link to="/services">
-                {{$t('pages.third')}}
-              </router-link>
-            </a></li>
-            <li><a class="max-lg:p-1" href="">
-              <router-link to="/contact">
-                {{$t('pages.fourth')}}
-              </router-link>
-            </a></li>
+            <li class="max-lg:flex max-lg:justify-center z-10">
+              <a class="max-lg:p-1 hover:no-underline" href="">
+                <router-link to="/">
+                  {{$t('pages.first')}}
+                </router-link>
+              </a>
+            </li>
+            <li class="peer z-10">
+              <a class="max-lg:p-1" href="">
+                <router-link to="/about">
+                  {{$t('pages.second')}}
+                </router-link>
+              </a>
+            </li>
+            <!-- hoverable dropdown menu min -->
+            <div class="hidden peer-hover:flex hover:flex absolute w-[400px] h-32 flex-row drop-shadow-lg">
+              <div class="basis-1/4">
+
+              </div>
+              <div class="flex basis-1/2 flex-col">
+                <a class="px-5 py-3 bg-transparent" href="#"></a>
+                <a class="px-5 py-3 bg-transparent" href="#"></a>
+                <a class="bg-[#331B3B] text-white px-5 py-3 hover:bg-[#240230] rounded-t-lg" href="#">Career</a>
+                <a class="bg-[#331B3B] text-white px-5 py-3 hover:bg-[#240230]" href="#">Company</a>
+                <a class="bg-[#331B3B] text-white px-5 py-3 hover:bg-[#240230] rounded-b-lg" href="#">Privacy Policy</a></div>
+            </div>
+            <li class="z-10">
+              <a class="max-lg:p-1" href="">
+                <router-link to="/services">
+                  {{$t('pages.third')}}
+                </router-link>
+              </a>
+            </li>
+            <li class="z-10">
+              <a class="max-lg:p-1" href="">
+                <router-link to="/contact">
+                  {{$t('pages.fourth')}}
+                </router-link>
+              </a>
+            </li>
           </ul>
         </div>
-        <div
-            class="self-center relative underline__style max-lg:mt-48 max-lg:z-20 max-lg:bg-[rgba(255,222,212,0.3)] max-lg:absolute max-lg:left-0 max-lg:rounded-br-3xl max-lg:hidden">
+        <div class="self-center relative underline__style max-lg:mt-48 max-lg:z-20 max-lg:bg-[rgba(255,222,212,0.3)] max-lg:absolute max-lg:left-0 max-lg:rounded-br-3xl max-lg:hidden">
           <ul class="flex space-x-8 font-normal text-base text-[#331B3B] max-lg:flex-col max-lg:space-y-4 max-lg:p-20">
-            <li class="max-lg:flex max-lg:justify-center hover:no-underline"><a class="max-lg:p-1 hover:no-underline" href="">
-              <router-link to="/">
-                {{$t('pages.first')}}
-              </router-link>
-            </a></li>
-            <li><a class="max-lg:p-1" href="">
-              <router-link to="/about">
-                {{$t('pages.second')}}
-              </router-link>
-            </a></li>
-            <li><a class="max-lg:p-1" href="">
-              <router-link to="/services">
-                {{$t('pages.third')}}
-              </router-link>
-            </a></li>
-            <li><a class="max-lg:p-1" href="">
-              <router-link to="/contact">
-                {{$t('pages.fourth')}}
-              </router-link>
-            </a></li>
+            <li class="z-10 max-lg:flex max-lg:justify-center hover:no-underline">
+              <a class="max-lg:p-1 hover:no-underline" href="">
+                <router-link to="/">
+                  {{$t('pages.first')}}
+                </router-link>
+              </a>
+            </li>
+            <li class="peer z-10">
+              <a class="max-lg:p-1" href="">
+                <router-link to="/about">
+                  {{$t('pages.second')}}
+                </router-link>
+              </a>
+            </li>
+            <!-- hoverable dropdown menu -->
+            <div class="hidden peer-hover:flex hover:flex absolute w-[200px] flex-col drop-shadow-lg">
+              <a class="px-5 py-3 bg-transparent" href="#"></a>
+              <a class="px-5 py-3 bg-transparent" href="#"></a>
+              <a class="bg-[#331B3B] text-white px-5 py-3 hover:bg-[#240230] rounded-t-lg" href="#">Career</a>
+              <a class="bg-[#331B3B] text-white px-5 py-3 hover:bg-[#240230]" href="#">Company</a>
+              <a class="bg-[#331B3B] text-white px-5 py-3 hover:bg-[#240230] rounded-b-lg" href="#">Privacy Policy</a>
+            </div>
+            <li class="z-10">
+              <a class="max-lg:p-1" href="">
+                <router-link to="/services">
+                  {{$t('pages.third')}}
+                </router-link>
+              </a>
+            </li>
+            <li>
+              <a class="max-lg:p-1" href="">
+                <router-link to="/contact">
+                  {{$t('pages.fourth')}}
+                </router-link>
+              </a>
+            </li>
           </ul>
         </div>
         <div class="flex order-first lg:hidden self-center cursor-pointer z-40" @click="showMenu"
@@ -80,8 +115,7 @@
           </h1>
         </div>
         <div class="flex self-center space-x-2 z-20 max-sm:space-x-0">
-          <span class="text-xl font-semibold text-[#331B3B] self-center cursor-pointer"
-                @click="switchLang">{{ $t('switchLang') }}</span>
+          <span class="text-xl font-semibold text-[#331B3B] self-center cursor-pointer" @click="switchLang">{{ $t('switchLang') }}</span>
           <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/facebook.svg" alt="">
           <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/linkedin.svg" alt="">
           <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/instagram.svg" alt="">
