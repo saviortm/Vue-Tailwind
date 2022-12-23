@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import './axios'
 
 import { languages } from './i18n'
 import { defaultLocale} from './i18n'

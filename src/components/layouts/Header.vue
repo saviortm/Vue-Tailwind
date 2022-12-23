@@ -40,20 +40,14 @@
             </button>
             <div class="px-6 py-6 lg:px-8">
               <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
-              <form class="space-y-6" action="#">
+              <form @submit.prevent="handleSubmit" class="space-y-6" action="#">
                 <div>
                   <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
                   <input v-model="state.email"  type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com" required>
-                  <span v-if="v$.email.$error">
-                  {{v$.email.$errors[0].$message}}
-                </span>
                 </div>
                 <div>
                   <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
                   <input v-model="state.password"  type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
-                  <span v-if="v$.password.$error">
-                  {{v$.password.$errors[0].$message}}
-                </span>
                 </div>
                 <div class="flex justify-between">
                   <div class="flex items-start">
@@ -64,9 +58,9 @@
                   </div>
                   <a href="#" class="text-sm text-[#331B3B] hover:underline dark:text-blue-500">Lost Password?</a>
                 </div>
-                <button @click="submitForm" type="button" class="w-full text-white bg-[#331B3B] hover:bg-[#240230] focus:ring-4 focus:outline-none focus:ring-[#5f1e75] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login to your account</button>
+                <button @click="submitForm" type="submit" class="w-full text-white bg-[#331B3B] hover:bg-[#240230] focus:ring-4 focus:outline-none focus:ring-[#5f1e75] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login to your account</button>
                 <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                  Not registered? <a href="#" class="text-[#331B3B] hover:underline">Create account</a>
+                  Not registered? <router-link to="/signup" class="text-[#331B3B] hover:underline">Create account</router-link>
                 </div>
               </form>
             </div>
@@ -83,7 +77,7 @@
                 d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"
             />
           </svg>
-          <p>Success! This is a success alert—check it out!</p>
+          <p>SUCCESS! You have successfully logged in!</p>
         </div>
         <button @click="closeAlterSuccess" class="text-green-100 hover:text-white">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -99,7 +93,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-6" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
           </svg>
-          <p>Danger! This is an error alert—check it out!</p>
+          <p>ERROR! There was an error logging in!</p>
         </div>
         <button @click="closeAlterWrong" class="text-red-100 hover:text-white">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -128,6 +122,7 @@
 import useValidate from '@vuelidate/core'
 import { required, email, minLength } from '@vuelidate/validators'
 import { reactive, computed } from "vue";
+import axios from 'axios'
 
 export default {
   setup()
@@ -154,6 +149,8 @@ export default {
       modal: false,
       alertSuccess: false,
       alertDanger: false,
+      email: '',
+      password: ''
     };
   },
   computed: {
@@ -189,6 +186,16 @@ export default {
     Jump() {
       const element = document.getElementById('contact-me');
       element.scrollIntoView({ behavior: 'smooth' });
+    },
+    async handleSubmit(){
+      console.log('first');
+      const response = await axios.post('/api/login', {
+        email: this.state.email,
+        password: this.state.password,
+      });
+      console.log('second');
+      console.log(response);
+      console.log(response.data.token);
     }
   },
 }
