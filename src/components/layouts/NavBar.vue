@@ -3,7 +3,7 @@
     <div id="contact-me" class="bg-transparent">
       <div class="flex justify-between h-[100px] mx-[50px] max-sm:mx-2">
         <div
-            class="self-center relative underline__style max-lg:mt-48 max-lg:z-20 max-lg:bg-[rgba(255,222,212,0.3)] max-lg:absolute max-lg:left-0 max-lg:rounded-br-3xl"
+            class="self-center relative underline__style max-lg:mt-48 max-lg:z-20 max-lg:bg-[rgba(255,222,212,0.3)] max-lg:absolute max-lg:left-0 max-lg:rounded-br-3xl lg:hidden"
             v-if="show !== 1">
           <ul class="flex space-x-8 font-normal text-base text-[#331B3B] max-lg:flex-col max-lg:space-y-4 max-lg:p-20">
             <li class="max-lg:flex max-lg:justify-center z-10">
@@ -21,11 +21,10 @@
               </a>
             </li>
             <!-- hoverable dropdown menu min -->
-            <div class="hidden peer-hover:flex hover:flex absolute w-[400px] h-32 flex-row drop-shadow-lg max-sm:w-[200px]">
-              <div class="basis-1/2">
-
+            <div class="hidden peer-hover:flex hover:flex absolute w-[400px] h-32 flex-row drop-shadow-lg max-md:w-[300px] max-sm:w-[200px]">
+              <div class="basis-1/3 max-sm:basis-1/2">
               </div>
-              <div class="flex basis-1/2 flex-col">
+              <div class="flex basis-2/3 flex-col max-sm:basis-1/2">
                 <a class="px-5 py-3 bg-transparent" href="#"></a>
                 <a class="px-5 py-3 bg-transparent" href="#"></a>
                 <a class="bg-[#331B3B] text-white px-5 py-3 hover:bg-[#240230] rounded-t-lg" href="#">Career</a>

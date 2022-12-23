@@ -24,7 +24,7 @@
         </thead>
         <tbody>
         <tr  v-for="(employee, index) in filteredCompany" :key="index" :id="employee.id" class="bg-white border-b transition duration-500 hover:bg-gray-200 ">
-          <td class="p-4 w-4">
+          <td class="p-4 w-4">z
             <div class="flex items-center">
               <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500">
               <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
@@ -42,8 +42,9 @@
           </td>
           <td class="py-4 px-6">
             <div class="flex items-center">
-              <div :class="employee.status === 'Online' ? 'bg-green-400' : 'bg-red-500'" class="h-2.5 w-2.5 rounded-full mr-2"></div>
-              {{ employee.status }}
+              <div :class="employee.status === true ? 'bg-green-400' : 'bg-red-500'" class="h-2.5 w-2.5 rounded-full mr-2"></div>
+              <div v-if="employee.status">Online</div>
+              <div v-else>Offline</div>
             </div>
           </td>
         </tr>
@@ -86,7 +87,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@gmail.com',
         position: 'React Developer',
-        status: 'Online',
+        status: true,
         img: face1,
       },
       {
@@ -95,7 +96,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@flowbite.com',
         position: 'Designer',
-        status: 'Online',
+        status: true,
         img: face2,
       },
       {
@@ -104,7 +105,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@flowbite.com',
         position: 'Vue JS Developer',
-        status: 'Online',
+        status: true,
         img: face3,
       },
       {
@@ -113,7 +114,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@flowbite.com',
         position: 'UI/UX Engineer',
-        status: 'Online',
+        status: true,
         img: face4,
       },
       {
@@ -122,7 +123,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@flowbite.com',
         position: "SEO Specialist",
-        status: 'Offline',
+        status: false,
         img: face6,
       },
       {
@@ -131,7 +132,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@flowbite.com',
         position: 'React Developer',
-        status: 'Online',
+        status: true,
         img: face5,
       },
       {
@@ -140,7 +141,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@flowbite.com',
         position: 'React Developer',
-        status: 'Online',
+        status: true,
         img: face3,
       },
       {
@@ -149,7 +150,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@flowbite.com',
         position: 'React Developer',
-        status: 'Online',
+        status: true,
         img: face5,
       },
       {
@@ -158,7 +159,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@flowbite.com',
         position: 'React Developer',
-        status: 'Online',
+        status: true,
         img: face2,
       },
       {
@@ -167,7 +168,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@flowbite.com',
         position: 'React Developer',
-        status: 'Online',
+        status: true,
         img: face6,
       },
       {
@@ -176,7 +177,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@flowbite.com',
         position: 'React Developer',
-        status: 'Online',
+        status: true,
         img: face1,
       },
       {
@@ -185,7 +186,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@flowbite.com',
         position: 'React Developer',
-        status: 'Offline',
+        status: false,
         img: face4,
       },
       {
@@ -194,7 +195,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@flowbite.com',
         position: 'React Developer',
-        status: 'Offline',
+        status: false,
         img: face2,
       },
       {
@@ -203,7 +204,7 @@ export default {
         phone_number: '+998 78 945 61 23',
         email: 'neil.sims@flowbite.com',
         position: 'React Developer',
-        status: 'Offline',
+        status: false,
         img: face1,
       },
     ],
