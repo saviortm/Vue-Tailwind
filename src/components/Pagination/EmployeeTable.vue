@@ -24,7 +24,7 @@
         </thead>
         <tbody>
         <tr  v-for="(employee, index) in filteredCompany" :key="index" :id="employee.id" class="bg-white border-b transition duration-500 hover:bg-gray-200 ">
-          <td class="p-4 w-4">z
+          <td class="p-4 w-4">
             <div class="flex items-center">
               <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500">
               <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
