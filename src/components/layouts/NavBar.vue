@@ -132,7 +132,6 @@
 </template>
 
 <script>
-
 export default {
   name: "NavBar",
   data: function () {
@@ -150,14 +149,12 @@ export default {
       console.log('Show is :' + this.show);
     },
   }
-
 }
 </script>
 
 <script setup>
 import { useI18n } from 'vue-i18n';
 const { t, locale } = useI18n({useScope: 'global'})
-
 const switchLang = () => {
   locale.value === 'en' ? locale.value = 'uz' : locale.value = 'en';
   console.log('Language: '+ locale.value);
@@ -173,23 +170,18 @@ const switchLang = () => {
   background: #FDC221;
   bottom: 0;
 }
-
 .underline__style ul li:hover a {
   font-weight: 500;
 }
-
 @media screen and (max-width: 1024px) {
-
   .underline__style ul li:hover a {
     font-weight: 400;
   }
-
   .underline__style ul li a:hover {
     background: #331B3B;
     color: white;
     border-radius: 1rem;
   }
-
   .underline__style ul li:hover a::before {
     content: '';
     position: static;

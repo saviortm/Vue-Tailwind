@@ -116,14 +116,12 @@
     </div>
   </div>
 </template>
-
 <!-----   script tag   ------>
 <script>
 import useValidate from '@vuelidate/core'
 import { required, email, minLength } from '@vuelidate/validators'
 import { reactive, computed } from "vue";
 import axios from 'axios'
-
 export default {
   setup()
   {
@@ -171,7 +169,6 @@ export default {
         this.alertSuccess = true;
         setTimeout(() => this.alertSuccess = false, 3000)
         setTimeout(() => this.modal = false, 500)
-
       } else {
         this.alertDanger = true;
         setTimeout(() => this.alertDanger = false, 3000)
@@ -192,7 +189,6 @@ export default {
         email: this.state.email,
         password: this.state.password,
       });
-
       localStorage.setItem('token', response.data.token);
       console.log(response.data.token)
       setTimeout(() => this.$router.push('/admin'), 2000)
