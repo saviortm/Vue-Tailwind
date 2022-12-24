@@ -3,7 +3,8 @@ import Index from "@/components/home/Index";
 import  AboutUs from "@/components/pages/AboutUs";
 import Services from "@/components/pages/Services";
 import ContactUs from "@/components/pages/ContactUs";
-import SignUp from "@/components/SignUp";
+import SignUp from "@/components/pages/SignUp";
+import Admin from "@/components/pages/Admin";
 
 const routes = [
     {
@@ -30,6 +31,11 @@ const routes = [
         path: '/signup',
         name: 'SignUp',
         component: SignUp
+    },
+    {
+        path: '/admin',
+        name: 'Admin',
+        component: Admin
     }
 ]
 const router = createRouter({

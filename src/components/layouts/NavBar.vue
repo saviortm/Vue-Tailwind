@@ -2,6 +2,7 @@
   <div>
     <div id="contact-me" class="bg-transparent">
       <div class="flex justify-between h-[100px] mx-[50px] max-sm:mx-2">
+        <!-- small nav menu -->
         <div
             class="self-center relative underline__style max-lg:mt-48 max-lg:z-20 max-lg:bg-[rgba(255,222,212,0.3)] max-lg:absolute max-lg:left-0 max-lg:rounded-br-3xl lg:hidden"
             v-if="show !== 1">
@@ -47,6 +48,7 @@
             </li>
           </ul>
         </div>
+        <!-- large nav menu -->
         <div class="self-center relative underline__style max-lg:mt-48 max-lg:z-20 max-lg:bg-[rgba(255,222,212,0.3)] max-lg:absolute max-lg:left-0 max-lg:rounded-br-3xl max-lg:hidden">
           <ul class="flex space-x-8 font-normal text-base text-[#331B3B] max-lg:flex-col max-lg:space-y-4 max-lg:p-20">
             <li class="z-10 max-lg:flex max-lg:justify-center hover:no-underline">
@@ -87,6 +89,7 @@
             </li>
           </ul>
         </div>
+        <!-- burger button -->
         <div class="flex order-first lg:hidden self-center cursor-pointer z-40" @click="showMenu"
              v-if="show !== 0">
           <svg
@@ -104,16 +107,20 @@
             />
           </svg>
         </div>
+        <!-- x button -->
         <div class="flex order-first lg:hidden self-center cursor-pointer z-40" @click="showMenu"
              v-if="show !== 1">
           <p class="font-[800] text-2xl text-[#331B3B]">&#x2715</p>
         </div>
+        <!-- title -->
         <div class="self-center z-20">
           <h1 class="text-2xl tracking-widest text-[#331B3B] font-bold max-sm:text-xl max-lg:static">
             {{ $t('title') }}
           </h1>
         </div>
+        <!-- icons on the right -->
         <div class="flex self-center space-x-2 z-20 max-sm:space-x-0">
+          <span class="text-base font-light text-[#331B3B] self-center cursor-pointer" @click="">LogIn</span>
           <span class="text-xl font-semibold text-[#331B3B] self-center cursor-pointer" @click="switchLang">{{ $t('switchLang') }}</span>
           <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/facebook.svg" alt="">
           <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/linkedin.svg" alt="">

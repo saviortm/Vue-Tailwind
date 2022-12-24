@@ -188,16 +188,16 @@ export default {
       element.scrollIntoView({ behavior: 'smooth' });
     },
     async handleSubmit(){
-      console.log('first');
       const response = await axios.post('/api/login', {
         email: this.state.email,
         password: this.state.password,
       });
-      console.log('second');
-      console.log(response);
-      console.log(response.data.token);
+
+      localStorage.setItem('token', response.data.token);
+      console.log(response.data.token)
+      setTimeout(() => this.$router.push('/admin'), 2000)
     }
-  },
+  }
 }
 </script>
 <style scoped>
