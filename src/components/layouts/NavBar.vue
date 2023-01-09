@@ -241,12 +241,12 @@
                     <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/facebook.svg" alt="">
                     <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/linkedin.svg" alt="">
                     <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/instagram.svg" alt="">
-                    <a @click="showModalOpen"
+                    <a v-if="!isLoggedIn" @click="showModalOpen"
                        class="text-lg font-semibold text-[#331B3B] self-center cursor-pointer flex flex-col max-lg:text-sm max-sm:text-xs"><span>Log</span><span>In</span>
-                        {{ isToken }}</a>
-                    <a @click="handleClick"
+                    </a>
+                    <a v-if="isLoggedIn" @click="handleClick"
                        class="text-lg font-semibold text-[#331B3B] self-center cursor-pointer flex flex-col max-lg:text-sm max-sm:text-xs"><span>Log</span><span>Out</span>
-                        {{ isToken }} </a>
+                    </a>
                 </div>
             </div>
         </div>
@@ -259,15 +259,9 @@ import useValidate from '@vuelidate/core'
 import { required, email, minLength } from '@vuelidate/validators'
 import { reactive, computed } from "vue";
 import axios from 'axios'
-import { useI18n } from 'vue-i18n';
 
 export default {
     setup () {
-        const { t, locale } = useI18n({ useScope: 'global' })
-        const switchLang = () => {
-            locale.value === 'en' ? locale.value = 'uz' : locale.value = 'en';
-            console.log('Language: ' + locale.value);
-        }
         const state = reactive({
             email: '',
             password: '',
@@ -294,7 +288,7 @@ export default {
             email: '',
             password: '',
             show: 1,
-            isToken: false,
+            isLoggedIn: false,
         };
     },
     computed: {
@@ -334,13 +328,11 @@ export default {
                         email: this.state.email,
                         password: this.state.password,
                     });
-                    console.log(response.data.token)
                     localStorage.setItem('token', response.data.token);
                     this.alertSuccess = true;
                     setTimeout(() => this.alertSuccess = false, 3000)
                     setTimeout(() => this.modal = false, 500)
                     setTimeout(() => this.$router.push('/admin'), 3000)
-                    this.isToken = true
                 } else {
                     this.alertDanger = true;
                     setTimeout(() => this.alertDanger = false, 3000)
@@ -354,9 +346,14 @@ export default {
         handleClick () {
             localStorage.removeItem('token');
             this.$router.push('/');
-            this.isToken = false;
         }
-    }
+    },
+
+    created () {
+        if (localStorage.getItem('token')) {
+            this.isLoggedIn = true;
+        }
+    },
 }
 </script>
 <style scoped>
