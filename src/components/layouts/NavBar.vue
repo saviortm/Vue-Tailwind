@@ -201,10 +201,8 @@
           <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/facebook.svg" alt="">
           <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/linkedin.svg" alt="">
           <img class="cursor-pointer max-sm:w-[40px]" src="../../assets/instagram.svg" alt="">
-<!--          <span v-if="user" @click="showModalOpen" class="text-lg font-semibold text-[#331B3B] self-center cursor-pointer flex flex-col max-lg:text-sm max-sm:text-xs"><span>Log</span><span>In</span></span>-->
-<!--          <a href="javascript:void(0)" v-if="user" @click="handleClick" class="text-lg font-semibold text-[#331B3B] self-center cursor-pointer flex flex-col max-lg:text-sm max-sm:text-xs"><span>Log</span><span>Out</span> </a>-->
-          <span @click="showModalOpen" class="text-lg font-semibold text-[#331B3B] self-center cursor-pointer flex flex-col max-lg:text-sm max-sm:text-xs"><span>Log</span><span>In</span></span>
-          <a href="javascript:void(0)" @click="handleClick" class="text-lg font-semibold text-[#331B3B] self-center cursor-pointer flex flex-col max-lg:text-sm max-sm:text-xs"><span>Log</span><span>Out</span> </a>
+          <a v-if="!isToken" @click="showModalOpen" class="text-lg font-semibold text-[#331B3B] self-center cursor-pointer flex flex-col max-lg:text-sm max-sm:text-xs"><span>Log</span><span>In</span> {{isToken}}</a>
+          <a v-if="!isToken"  @click="handleClick" class="text-lg font-semibold text-[#331B3B] self-center cursor-pointer flex flex-col max-lg:text-sm max-sm:text-xs"><span>Log</span><span>Out</span> {{isToken}} </a>
         </div>
       </div>
     </div>
@@ -252,6 +250,7 @@ export default {
       email: '',
       password: '',
       show: 1,
+      isToken: false,
     };
   },
   computed: {
@@ -298,6 +297,8 @@ export default {
           setTimeout(() => this.alertSuccess = false, 3000)
           setTimeout(() => this.modal = false, 500)
           setTimeout(() => this.$router.push('/admin'), 3000)
+          this.isToken = true
+          console.log('Is token : ' + this.isToken)
         }
         else {
           this.alertDanger = true;
@@ -310,22 +311,12 @@ export default {
       }
 
     },
-    // submitForm() {
-    //   this.v$.$validate()
-    //   if(!this.v$.$error) {
-    //     this.alertSuccess = true;
-    //     setTimeout(() => this.alertSuccess = false, 3000)
-    //     setTimeout(() => this.modal = false, 500)
-    //
-    //   } else {
-    //     this.alertDanger = true;
-    //     setTimeout(() => this.alertDanger = false, 3000)
-    //   }
-    // },
     handleClick() {
       localStorage.removeItem('token');
       this.$router.push('/');
       console.log('Log Out');
+      this.isToken = false;
+      console.log('Is token : ' + this.isToken)
     }
   },
 }
