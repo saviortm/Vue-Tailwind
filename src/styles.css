@@ -1,18 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 body {
-    background-color: #ffffff!important;
+    background-color: #ffffff !important;
 }
+
 h1 {
-    font-family: "Playfair Display"!important;
+    font-family: "Playfair Display" !important;
 }
+
 li p {
-    font-family: "Hind Vadodara"!important;
+    font-family: "Hind Vadodara" !important;
 
 }
-#pposition::placeholder{
+
+#pposition::placeholder {
     padding-left: 13px;
 }
+
 li {
     cursor: pointer !important;
 }
@@ -21,7 +26,7 @@ li {
     accent-color: #5f1e75;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
     .header__height {
         height: 400px;
     }
@@ -33,17 +38,18 @@ li {
         padding-top: 0;
     }
 
-    .my__slide__card{
+    .my__slide__card {
         box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.08);
     }
 
     .my__slide__pic {
-      width: 200px;
+        width: 200px;
     }
 
     .work__card__pic1 {
         width: 220px;
     }
+
     .work__card__pic2 {
         width: 70px;
     }
