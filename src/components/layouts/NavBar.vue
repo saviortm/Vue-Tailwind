@@ -26,20 +26,18 @@
                                     <label for="email"
                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
                                         email</label>
-                                    <input v-model="state.email" type="email" name="email" id="email"
+                                    <input v-model="email" type="email" name="email" id="email"
                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                            placeholder="name@company.com" required>
-                                    <span v-if="v$.email.$error">{{ v$.email.$errors[0].$message }}</span>
                                 </div>
                                 <div>
                                     <label for="password"
                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
                                         password</label>
-                                    <input v-model="state.password" type="password" name="password" id="password"
+                                    <input v-model="password" type="password" name="password" id="password"
                                            placeholder="••••••••"
                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                            required>
-                                    <span v-if="v$.password.$error">{{ v$.password.$errors[0].$message }}</span>
                                 </div>
                                 <div class="flex justify-between">
                                     <div class="flex items-start">
@@ -254,30 +252,17 @@
 </template>
 
 <!-----   script tag   ------>
+<script setup>
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n({useScope: 'global'})
+const switchLang = () => {
+  locale.value === 'en' ? locale.value = 'uz' : locale.value = 'en'
+}
+</script>
 <script>
-import useValidate from '@vuelidate/core'
-import { required, email, minLength } from '@vuelidate/validators'
-import { reactive, computed } from "vue";
 import axios from 'axios'
 
 export default {
-    setup () {
-        const state = reactive({
-            email: '',
-            password: '',
-        })
-        const rules = computed(() => {
-            return {
-                email: { required, email },
-                password: { required, minLength: minLength(6) },
-            }
-        })
-        const v$ = useValidate(rules, state)
-        return {
-            state,
-            v$,
-        }
-    },
     name: "NavBar",
     props: ['user'],
     data: function () {
@@ -322,21 +307,16 @@ export default {
         },
         async handleSubmit () {
             try {
-                this.v$.$validate()
-                if (!this.v$.$error) {
                     const response = await axios.post('/api/login', {
-                        email: this.state.email,
-                        password: this.state.password,
+                        email: this.email,
+                        password: this.password,
                     });
                     localStorage.setItem('token', response.data.token);
                     this.alertSuccess = true;
                     setTimeout(() => this.alertSuccess = false, 3000)
                     setTimeout(() => this.modal = false, 500)
                     setTimeout(() => this.$router.push('/admin'), 3000)
-                } else {
-                    this.alertDanger = true;
-                    setTimeout(() => this.alertDanger = false, 3000)
-                }
+
             } catch (error) {
                 this.alertDanger = true;
                 setTimeout(() => this.alertDanger = false, 3000)
