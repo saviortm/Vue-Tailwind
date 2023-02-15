@@ -7,7 +7,6 @@
             <div class="w-full h-[600px]">
                 <!------------Start table---------->
                 <EmployeeTable/>
-
             </div>
         </div>
         <Footer/>

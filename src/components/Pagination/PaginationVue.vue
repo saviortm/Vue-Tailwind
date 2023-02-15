@@ -94,19 +94,15 @@ export default {
     methods: {
         prevPage () {
             this.pageNumber--;
-            console.log('From Pagination prevPage() pageNumber :' + this.pageNumber)
             this.$emit("prevPage");
         },
         nextPage () {
             this.pageNumber++;
-            console.log('From Pagination nextPage() pageNumber :' + this.pageNumber)
             this.$emit("nextPage");
         },
         currentPage (currentPage) {
             this.pageNumber = 0;
             this.pageNumber = this.pageNumber + (currentPage - 1);
-            console.log('From Pagination currentPage() pageNumber :' + this.pageNumber)
-            console.log('From Pagination currentPage() currentPage :' + currentPage)
             this.$emit("currentPage", currentPage)
 
         },

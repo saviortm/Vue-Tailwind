@@ -216,18 +216,15 @@ export default {
     methods: {
         prevPage () {
             this.pageNumber--;
-            console.log('From Employee prevPage() pageNumber :' + this.pageNumber)
+
         },
         nextPage () {
             this.pageNumber++;
-            console.log('From Employee nextPage() pageNumber :' + this.pageNumber)
+
         },
         currentPage (currentPage) {
             this.pageNumber = 0;
             this.pageNumber = this.pageNumber + (currentPage - 1);
-            console.log('From Employee currentPage() pageNumber :' + this.pageNumber)
-            console.log('From Employee currentPage() currentPage :' + currentPage)
-            console.log('From Employee currentPage() activeEmployee :' + this.activeEmployee)
         },
     },
     components: {
